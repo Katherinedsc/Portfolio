@@ -4,14 +4,47 @@ Welcome to my portfolio! I am a data analyst with expertise in data visualizatio
 
 Projects
 
-## Project 1: Sales Analysis Dashboard
-This project involved creating a sales analysis dashboard using Tableau. The dashboard provides a comprehensive view of the company's sales data and helps identify key trends and insights. I used Tableau to create interactive visualizations and charts that allowed users to explore the data in a meaningful way.
+## Project 1: Identifying Car Types by Fuel Type in Ireland- Dashboard
+This project involved creating a sales analysis dashboard using Tableau. I collaborated with another person to create a graphic in Tableau that identifies the types of cars that are in Ireland by type of fuel. We used a dataset of car registrations in Ireland over the past five years and analyzed it using Tableau to create an interactive dashboard that shows the breakdown of car types by fuel type. Our goal was to help policymakers and researchers understand the current state of the Irish car market and its impact on the environment.
 
-## Project 2: Predictive Modeling with Python
-In this project, I used Python to develop a predictive model for customer churn. I used data from a telecommunications company to train and test the model, which achieved an accuracy of over 85%. I also created visualizations using matplotlib and seaborn to help communicate the results of the model.
+To create this project, we used Tableau to:
 
-## Project 3: Data Cleaning and Analysis with R
-In this project, I used R to clean and analyze a large dataset of weather data. I used dplyr and tidyr to clean and manipulate the data and ggplot2 to create visualizations that helped identify patterns and trends in the data.
+- Connect to the car registration dataset
+- Clean and transform the data
+- Create visualizations that show the breakdown of car types by fuel type
+- Publish the interactive dashboard on Tableau Public
+
+Overall, this project allowed us to showcase our data analysis and visualization skills using Tableau, and demonstrate our ability to work collaboratively on complex projects.
+
+
+## Project 2: Analyzing the Titanic Dataset Using Python
+For this project, I analyzed the Titanic dataset using Python. The goal was to gain insights into the factors that influenced survival rates among passengers on the Titanic. I used a variety of techniques in Python to explore the data, including:
+
+- Data cleaning and preprocessing
+- Exploratory data analysis
+- Feature engineering
+- Model building and evaluation
+
+Specifically, I:
+
+- Cleaned and preprocessed the dataset to handle missing values and categorical variables
+- Conducted exploratory data analysis to understand the distribution of variables and identify patterns and trends in the data
+- Created new features, such as family size and title, to improve the accuracy of the predictive model
+- Built and evaluated several machine learning models, including logistic regression and random forest, to predict survival rates
+
+Throughout this project, I demonstrated my ability to work with data in Python and apply a range of analytical techniques to gain insights and make predictions.
+
+## Project 3:  Sentiment Analysis of Amazon Reviews Using R
+For this project, I performed a sentiment analysis of Amazon reviews using R. The goal was to understand the overall sentiment of customers towards a specific product and identify areas for improvement. I collected a dataset of Amazon reviews for the product and used R to analyze the text and sentiment of the reviews.
+
+To complete this project, I used R to:
+
+- Preprocess the text data by removing stop words, punctuation, and other irrelevant information
+- Create a corpus of the text data and transform it into a term-document matrix
+- Conduct a sentiment analysis using the sentimentr package in R to assign positive, negative, or neutral scores to each review
+- Create visualizations to show the distribution of sentiment scores and identify common themes and issues mentioned in the reviews
+
+Overall, this project allowed me to showcase my data analysis skills using R, and demonstrate my ability to use sentiment analysis to gain insights into customer feedback.
 
 ## Skills and Tools
 
