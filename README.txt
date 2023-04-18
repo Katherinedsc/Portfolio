@@ -2,9 +2,9 @@
 
 Welcome to my portfolio! I am a data analyst with expertise in data visualization and predictive modeling. This portfolio showcases my work in various data-driven projects that I have completed using Tableau, Python, R, and other tools.
 
-<h2>Projects</h2>
+Projects
 
-Project 1: Sales Analysis Dashboard
+## Project 1: Sales Analysis Dashboard
 This project involved creating a sales analysis dashboard using Tableau. The dashboard provides a comprehensive view of the company's sales data and helps identify key trends and insights. I used Tableau to create interactive visualizations and charts that allowed users to explore the data in a meaningful way.
 
 ## Project 2: Predictive Modeling with Python
