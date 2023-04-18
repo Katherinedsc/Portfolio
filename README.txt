@@ -1,4 +1,4 @@
-# Introduction
+**Introduction**
 
 Welcome to my portfolio! I am a data analyst with expertise in data visualization and predictive modeling. This portfolio showcases my work in various data-driven projects that I have completed using Tableau, Python, R, and other tools.
 
