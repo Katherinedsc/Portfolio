@@ -25,5 +25,5 @@ Seaborn
 Pandas
 NumPy
 
-# Contact :star
+# Contact
 If you are interested in learning more about my work or collaborating on a project, please feel free to contact me at data.ksaa@gmail.com. Thank you for your interest!
