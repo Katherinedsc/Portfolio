@@ -7,7 +7,7 @@ Projects
 ## Project 1: Identifying Car Types by Fuel Type in Ireland- Dashboard
 This project involved creating a sales analysis dashboard using Tableau. I collaborated with another person to create a graphic in Tableau that identifies the types of cars that are in Ireland by type of fuel. We used a dataset of car registrations in Ireland over the past five years and analyzed it using Tableau to create an interactive dashboard that shows the breakdown of car types by fuel type. Our goal was to help policymakers and researchers understand the current state of the Irish car market and its impact on the environment.
 
-To create this project, we used Tableau to:
+To create this project, I used Tableau to:
 
 - Connect to the car registration dataset
 - Clean and transform the data
@@ -35,7 +35,7 @@ Specifically, I:
 Throughout this project, I demonstrated my ability to work with data in Python and apply a range of analytical techniques to gain insights and make predictions.
 
 ## Project 3:  Sentiment Analysis of Amazon Reviews Using R
-For this project, I performed a sentiment analysis of Amazon reviews using R. The goal was to understand the overall sentiment of customers towards a specific product and identify areas for improvement. I collected a dataset of Amazon reviews for the product and used R to analyze the text and sentiment of the reviews.
+I performed a sentiment analysis of Amazon reviews using R for this project. The goal was to understand the overall sentiment of customers towards a specific product and identify areas for improvement. I collected a dataset of Amazon reviews for the product and used R to analyze the text and sentiment of the reviews.
 
 To complete this project, I used R to:
 
