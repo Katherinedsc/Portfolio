@@ -10,6 +10,12 @@
 	<!-- Add Google Fonts to <head> -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
+	/* Glassmorphism effect for cards */
+.post.featured, .posts article {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(200,200,200,0.2);
+}
   body {
     font-family: 'Montserrat', Arial, sans-serif;
     background: #f7f9fb;
@@ -78,7 +84,7 @@
   }
 </style>
 <!-- ...existing code... -->
- 
+
 	<title> Data Insights by Katherine Saavedra </title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -277,6 +283,15 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 
+<!-- Add before </body> -->
+<a href="#top" id="backToTop" style="position:fixed;bottom:32px;right:32px;background:#0077b6;color:#fff;padding:12px 18px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:24px;text-align:center;display:none;z-index:1000;transition:background 0.2s;">
+  ↑
+</a>
+<script>
+  window.addEventListener('scroll', function() {
+    document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+</script>
 </body>
 
 </html>
