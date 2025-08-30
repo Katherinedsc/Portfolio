@@ -105,31 +105,37 @@
 
 <body class="is-preload">
   <div id="wrapper">
-    <!-- Intro -->
-    <div id="intro" style="margin-bottom:2rem;">
-      <h1>KATHERINE'S PORTFOLIO</h1>
-      <p>Welcome to my portfolio! This website showcases my work as a data analyst, including projects in Python, RStudio, SQL, Tableau, and Power BI.</p>
-      <p>Visit my profile on <a href="https://www.linkedin.com/in/katherinesaavedrac/">LinkedIn</a>.</p>
-      <ul class="actions">
-        <li><a href="#projects" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-      </ul>
-    </div>
+    <div id="wrapper">
+  <!-- Modern Navigation Menu -->
+  <nav id="nav">
+    <ul>
+      <li class="active"><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#experience">Work Experience</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Nav -->
-    <nav id="nav" style="margin-bottom:2rem;">
-      <ul class="links">
-        <li class="active"><a href="index.html">Projects</a></li>
-        <li><a href="elements.html">Katherine's Resume</a></li>
-      </ul>
-      <ul class="icons">
-        <li><a href="https://twitter.com/kathedsc" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-        <li><a href="https://github.com/Katherinedsc" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-      </ul>
-    </nav>
+  <!-- Home Section -->
+  <section id="home" style="text-align:center; margin-bottom:3rem;">
+    <h1>Katherine Saavedra</h1>
+    <p>Data-driven professional. Turning analytics into impact.</p>
+    <a href="#portfolio" class="button project-link">View Portfolio</a>
+  </section>
 
-    <!-- Projects Section -->
-    <h2 id="projects" style="text-align:center; margin-bottom:2rem; font-weight:700; color:#0077b6;">Featured Projects</h2>
+  <!-- About Me Section -->
+  <section id="about" style="margin-bottom:3rem;">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate data analyst with a strong background in Python, R, SQL, Tableau, and Power BI. My approach combines curiosity, rigor, and empathy to deliver actionable insights. I value collaboration, transparency, and continuous learning.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" style="margin-bottom:3rem;">
+    <h2>Portfolio / Projects</h2>
     <div class="projects-grid">
       <!-- Python Project -->
       <div class="project-card">
@@ -139,7 +145,7 @@
           <span>Python</span>
           <span>Data Analysis</span>
         </div>
-        <div class="project-desc">Python project using programming to solve problems, automate tasks, and perform data analysis or machine learning.</div>
+        <div class="project-desc">Context: Business data exploration.<br>Your role: Data analyst.<br>Impact: Automated reporting and actionable insights.</div>
         <a href="https://katherinedsc.github.io/Python-Project-/titanic-analisis.html" class="project-link">View Project</a>
       </div>
       <!-- SQL Project -->
@@ -150,7 +156,7 @@
           <span>SQL</span>
           <span>Data Analysis</span>
         </div>
-        <div class="project-desc">SQL project for extracting, transforming, and analyzing data to solve business problems and visualize insights.</div>
+        <div class="project-desc">Context: Raw sales data.<br>Your role: Data analyst.<br>Impact: Improved data quality for business decisions.</div>
         <a href="#" class="project-link">View Project</a>
       </div>
       <!-- Tableau Project -->
@@ -161,7 +167,7 @@
           <span>Tableau</span>
           <span>Data Analysis</span>
         </div>
-        <div class="project-desc">Tableau project for creating visualizations and dashboards to gain insights and communicate findings.</div>
+        <div class="project-desc">Context: Executive dashboards.<br>Your role: Visualization specialist.<br>Impact: Enhanced stakeholder understanding.</div>
         <a href="https://public.tableau.com/app/profile/katherine1469" class="project-link">View Projects</a>
       </div>
       <!-- Power BI Project -->
@@ -172,7 +178,7 @@
           <span>Power BI</span>
           <span>Data Analysis</span>
         </div>
-        <div class="project-desc">Power BI project for creating interactive dashboards and reports to visualize and analyze data from multiple sources.</div>
+        <div class="project-desc">Context: Financial reporting.<br>Your role: Dashboard creator.<br>Impact: Faster, clearer reporting.</div>
         <a href="#" class="project-link">View Project</a>
       </div>
       <!-- RStudio Project -->
@@ -183,58 +189,75 @@
           <span>RStudio</span>
           <span>Data Analysis</span>
         </div>
-        <div class="project-desc">RStudio project using R for data analysis, statistical modeling, and visualization for data-driven decision making.</div>
+        <div class="project-desc">Context: Customer reviews analysis.<br>Your role: Data scientist.<br>Impact: Identified key trends for marketing.</div>
         <a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="project-link">View Project</a>
       </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer id="footer" style="margin-top:3rem;">
-      <section>
-        <form action="https://formspree.io/f/xlekwnle" method="POST">
-          <label>
-            Full Name
-            <input type="text" name="name" id="full-name">
-          </label>
-          <label>
-            Your email:
-            <input type="email" name="email">
-          </label>
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-      <section class="split contact">
-        <section class="alt">
-          <h3>Address</h3>
-          <p>San Diego, California.<br /></p>
-        </section>
-        <section>
-          <h3>Phone number</h3>
-          <p><a href="#"> +1(858)281-1759</a></p>
-        </section>
-        <section>
-          <h3>Email</h3>
-          <p><a href="#">data.ksaa@gmail.com</a></p>
-        </section>
-        <section>
-          <h3>Social</h3>
-          <ul class="icons alt">
-            <li><a href="https://twitter.com/kathedsc" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-            <li><a href="https://github.com/Katherinedsc" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-          </ul>
-        </section>
-      </section>
-      <hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
-      <div id="copyright" style="text-align:center; color:#888; font-size:0.95em;">
-        &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
-      </div>
-    </footer>
-  </div>
+  <!-- Work Experience Section -->
+  <section id="experience" style="margin-bottom:3rem;">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>
+        <strong>Part-Time Data Analyst, XYZ Corp</strong><br>
+        <em>2023–2024</em><br>
+        Collaborated with teams to deliver insights and automate reporting.
+      </li>
+      <li>
+        <strong>Analytics Coordinator, ABC Inc</strong><br>
+        <em>2022–2023</em><br>
+        Led data quality initiatives and supported business strategy.
+      </li>
+      <!-- Add more roles as needed -->
+    </ul>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" style="margin-bottom:3rem;">
+    <h2>Services</h2>
+    <ul>
+      <li>Consulting: Data strategy and analytics</li>
+      <li>Business Intelligence: Tableau & Power BI dashboards</li>
+      <li>Data Cleaning & Preparation</li>
+      <li>Project Coordination</li>
+      <!-- Add more services as needed -->
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="margin-bottom:3rem;">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xlekwnle" method="POST" style="max-width:400px;margin:auto;">
+      <label>
+        Full Name
+        <input type="text" name="name" id="full-name">
+      </label>
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+    <div style="margin-top:2rem;">
+      <p>Email: <a href="mailto:data.ksaa@gmail.com">data.ksaa@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/katherinesaavedrac/">linkedin.com/in/katherinesaavedrac</a></p>
+      <p>Phone: +1(858)281-1759</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" style="margin-top:3rem;">
+    <hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
+    <div id="copyright" style="text-align:center; color:#888; font-size:0.95em;">
+      &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
+    </div>
+  </footer>
+</div>
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
