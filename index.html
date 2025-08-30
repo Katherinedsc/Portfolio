@@ -10,6 +10,21 @@
   <!-- Add Google Fonts to <head> -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
+	  /* ...existing CSS... */
+
+  .icons a:hover {
+    transform: scale(1.2);
+    box-shadow: 0 2px 12px rgba(0,123,182,0.15);
+  }
+
+  /* Add fade-in animation here */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
     /* Paste the new CSS code here */
     body {
       font-family: 'Montserrat', Arial, sans-serif;
@@ -312,10 +327,6 @@
 <div id="copyright" style="text-align:center; color:#888; font-size:0.95em;">
   &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
 </div>
-	
-		</div>
-
-	</div>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
