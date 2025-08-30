@@ -2,186 +2,32 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LJDG6D61ZC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LJDG6D61ZC');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJDG6D61ZC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LJDG6D61ZC');
+  </script>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <title>Data Insights by Katherine Saavedra</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/data.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
-
   <style>
-    /* Subtle Divider for experience entries */
-    .exp-photos img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 32px rgba(0,123,182,0.18);
-}
-
-/* Divider for experience entries */
-.exp-divider {
-  width: 100%;
-  height: 1px;
-  background: #eee;
-  margin: 2rem 0;
-  border-radius: 1px;
-}
-
-/* Center Home Section Content */
-.home-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 70vh;
-  text-align: center;
-  background: #fff;
-}
-
-.welcome-title {
-  font-size: 2.8rem;
-  font-weight: 900;
-  color: #0077b6;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.04em;
-}
-
-.welcome-divider {
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #0077b6, #00b4d8);
-  border-radius: 2px;
-  margin: 1rem auto 1.5rem auto;
-}
-
-.welcome-message {
-  font-size: 1.3rem;
-  color: #222;
-  margin-bottom: 2rem;
-  font-weight: 500;
-}
-
-.welcome-tagline {
-  display: block;
-  font-size: 1.1rem;
-  color: #00b4d8;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-/* CSS for photo styling */
-.exp-photos {
-  display: flex;
-  gap: 1.5rem;
-  margin: 1.5rem 0 0.5rem 0;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-.exp-photos img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,123,182,0.12);
-  border: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background: #f8f9fa;
-}
-
-.exp-photos img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 8px 32px rgba(0,123,182,0.18);
-}
-
-    /* Dynamic Table of Contents */
-#toc {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 180px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,123,182,0.10);
-  padding: 1.2rem 1rem;
-  z-index: 1001;
-  display: none;
-  transition: opacity 0.3s;
-}
-#toc ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-#toc ul li {
-  margin-bottom: 1rem;
-}
-#toc ul li a {
-  color: #0077b6;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  opacity: 0.25;
-  transition: opacity 0.5s, color 0.5s;
-}
-#toc ul li a.active {
-  opacity: 1;
-  color: #00b4d8;
-}
-@media (max-width: 900px) {
-  #toc {
-    display: none !important;
-  }
-}
-    /* Center Home Section Content */
-.home-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
-}
-	/* Minimalistic icon bullets for experience details */
-.exp-details {
-  margin: 0.5rem 0 1.5rem 0;
-  padding-left: 1.5rem;
-  list-style: none;
-  font-size: 1em;
-  line-height: 1.7;
-}
-
-.exp-details li {
-  position: relative;
-  margin-bottom: 0.7rem;
-  padding-left: 1.2em;
-  font-size: 0.98em;
-  color: #222;
-}
-
-.exp-details li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #00b4d8;
-  font-size: 1.2em;
-  line-height: 1;
-}
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      background: #fff;
+      background: linear-gradient(120deg, #e0f7fa 0%, #fff 100%);
       color: #222;
+    }
+    :root {
+      --accent: #00b4d8;
+      --primary: #0077b6;
     }
     #wrapper {
       max-width: 1100px;
@@ -214,7 +60,7 @@
       padding: 0.5rem 1.2rem;
       border-radius: 16px;
       background: none;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
       font-size: 1rem;
       letter-spacing: 0.03em;
       text-decoration: none;
@@ -225,6 +71,85 @@
       color: #fff;
       box-shadow: 0 2px 8px rgba(0,123,182,0.10);
       text-decoration: none;
+      transform: scale(1.05);
+    }
+    /* Dynamic Table of Contents */
+    #toc {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 180px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,123,182,0.10);
+      padding: 1.2rem 1rem;
+      z-index: 1001;
+      display: none;
+      transition: opacity 0.3s;
+    }
+    #toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #toc ul li {
+      margin-bottom: 1rem;
+    }
+    #toc ul li a {
+      color: #0077b6;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      opacity: 0.25;
+      transition: opacity 0.5s, color 0.5s;
+    }
+    #toc ul li a.active {
+      opacity: 1;
+      color: #00b4d8;
+    }
+    @media (max-width: 900px) {
+      #toc {
+        display: none !important;
+      }
+    }
+    /* Center Home Section Content */
+    .home-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      text-align: center;
+      background: #fff;
+    }
+    .welcome-title {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #0077b6;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+    .welcome-divider {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      border-radius: 2px;
+      margin: 1rem auto 1.5rem auto;
+    }
+    .welcome-message {
+      font-size: 1.3rem;
+      color: #222;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+    .welcome-tagline {
+      display: block;
+      font-size: 1.1rem;
+      color: #00b4d8;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
     /* Split About Section Styles */
     .about-split {
@@ -330,9 +255,11 @@
       margin-bottom: 1rem;
       box-shadow: 0 2px 8px rgba(0,123,182,0.07);
       transition: transform 0.2s;
+      cursor: pointer;
     }
     .project-card img:hover {
       transform: scale(1.04);
+      box-shadow: 0 8px 32px rgba(0,123,182,0.18);
     }
     .project-title {
       color: #0077b6;
@@ -365,7 +292,7 @@
       font-weight: 700;
       letter-spacing: 0.03em;
       text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
       box-shadow: 0 2px 8px rgba(0,123,182,0.10);
       display: inline-block;
       margin-top: 0.5rem;
@@ -373,6 +300,7 @@
     .project-link:hover, .button:hover {
       background: linear-gradient(90deg, #00b4d8, #0077b6);
       transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(0,123,182,0.12);
     }
     section {
       margin-bottom: 3rem;
@@ -382,6 +310,60 @@
       font-weight: 700;
       margin-bottom: 1rem;
       letter-spacing: 0.02em;
+    }
+    /* Subtle Divider for experience entries */
+    .exp-divider {
+      width: 100%;
+      height: 1px;
+      background: #eee;
+      margin: 2rem 0;
+      border-radius: 1px;
+    }
+    /* CSS for photo styling */
+    .exp-photos {
+      display: flex;
+      gap: 1.5rem;
+      margin: 1.5rem 0 0.5rem 0;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .exp-photos img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,123,182,0.12);
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #f8f9fa;
+      cursor: pointer;
+    }
+    .exp-photos img:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 32px rgba(0,123,182,0.18);
+    }
+    /* Minimalistic icon bullets for experience details */
+    .exp-details {
+      margin: 0.5rem 0 1.5rem 0;
+      padding-left: 1.5rem;
+      list-style: none;
+      font-size: 1em;
+      line-height: 1.7;
+    }
+    .exp-details li {
+      position: relative;
+      margin-bottom: 0.7rem;
+      padding-left: 1.2em;
+      font-size: 0.98em;
+      color: #222;
+    }
+    .exp-details li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #00b4d8;
+      font-size: 1.2em;
+      line-height: 1;
     }
     #footer {
       background: #f8f9fa;
@@ -488,29 +470,29 @@
       </ul>
     </nav>
     <!-- Dynamic Table of Contents -->
-<nav id="toc">
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#experience">Work Experience</a></li>
-    <li><a href="#volunteer">Volunteer Experience</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <nav id="toc">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#experience">Work Experience</a></li>
+        <li><a href="#volunteer">Volunteer Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
     <!-- Home Section -->
-<section id="home" class="home-center">
-  <h1 class="welcome-title">Katherine Saavedra Cortés</h1>
-  <div class="welcome-divider"></div>
-  <p class="welcome-message">
-    Welcome to my portfolio!<br>
-    <span class="welcome-tagline">Turning data, research, and community into impact.</span>
-    <br>
-  </p>
-  <a href="#portfolio" class="button project-link">View Portfolio</a>
-</section>
+    <section id="home" class="home-center">
+      <h1 class="welcome-title">Katherine Saavedra Cortés</h1>
+      <div class="welcome-divider"></div>
+      <p class="welcome-message">
+        Welcome to my portfolio!<br>
+        <span class="welcome-tagline">Turning data, research, and community into impact.</span>
+        <br>
+      </p>
+      <a href="#portfolio" class="button project-link">View Portfolio</a>
+    </section>
 
     <!-- Split About Me Section -->
     <section id="about" class="about-split">
@@ -526,10 +508,10 @@
       <div class="about-right">
         <h2>About Me</h2>
         <p>
-  Hi, I’m Katherine! I hold an MSc in Business Analytics and love working on diverse projects—from community programs and after-school initiatives to freelance data analysis. My passion is turning data into stories and solutions, whether it’s market research, data labeling, or analytics. <br><br>
-  I’m a curious learner who thrives on new challenges and enjoys collaborating with people from all backgrounds. I believe in the power of teamwork, empathy, and creativity to make a real impact. <br><br>
-  If you’re interested in connecting, sharing ideas, or working together, I’d love to hear from you!
-</p>
+          Hi, I’m Katherine! I hold an MSc in Business Analytics and love working on diverse projects—from community programs and after-school initiatives to freelance data analysis. My passion is turning data into stories and solutions, whether it’s market research, data labeling, or analytics. <br><br>
+          I’m a curious learner who thrives on new challenges and enjoys collaborating with people from all backgrounds. I believe in the power of teamwork, empathy, and creativity to make a real impact. <br><br>
+          If you’re interested in connecting, sharing ideas, or working together, I’d love to hear from you!
+        </p>
         <h3>Skills</h3>
         <ul class="skills-list">
           <li>Data Analysis & Visualization</li>
@@ -539,30 +521,28 @@
           <li>Stakeholder Reporting</li>
           <li>Collaboration</li>
           <li>Project Coordination</li>
-		  <li>Community Outreach</li>
+          <li>Community Outreach</li>
         </ul>
-		<!-- Languages Section -->
-<section id="languages">
-  <h2>Languages</h2>
-  <ul class="skills-list">
-    <li>English (Fluent)</li>
-    <li>Spanish (Native)</li>
-    <li>Portuguese (limited)</li>
-    <!-- Add more languages as needed -->
-  </ul>
-</section>
-<!-- Interests Section -->
-<section id="interests">
-  <h2>Interests</h2>
-  <ul class="skills-list">
-    <li>Community Outreach</li>
-    <li>Education</li>
-    <li>Technology</li>
-    <li>Travel</li>
-    <li>Reading</li>
-    <!-- Add more interests as needed -->
-  </ul>
-</section>
+        <!-- Languages Section -->
+        <section id="languages">
+          <h2>Languages</h2>
+          <ul class="skills-list">
+            <li>English (Fluent)</li>
+            <li>Spanish (Native)</li>
+            <li>Portuguese (limited)</li>
+          </ul>
+        </section>
+        <!-- Interests Section -->
+        <section id="interests">
+          <h2>Interests</h2>
+          <ul class="skills-list">
+            <li>Community Outreach</li>
+            <li>Education</li>
+            <li>Technology</li>
+            <li>Travel</li>
+            <li>Reading</li>
+          </ul>
+        </section>
       </div>
     </section>
 
@@ -627,86 +607,87 @@
           <a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="project-link">View Project</a>
         </div>
       </div>
+      <!-- Download Resume Button -->
+      <a href="files/Katherine_Saavedra_Resume.pdf" class="button" download style="margin-top:1rem;">
+        Download My Resume
+      </a>
     </section>
 
     <!-- Work Experience Section -->
     <section id="experience">
       <h2>Work Experience</h2>
-<ul>
-  <li>
-    <strong>Freelance Data & Research Specialist, Various Clients</strong><br>
-    <em>2020–Present</em>
-    <ul class="exp-details">
-      <li>Conduct data collection, cleaning, and validation for client projects.</li>
-      <li>Design interactive dashboards to visualize key performance indicators.</li>
-    </ul>
-    <div class="exp-photos">
-      <img src="images/upwork1.png" alt="reviews" />
-    </div>
-  </li>
-  <div class="exp-divider"></div>
-  <li>
-    <strong>Opus Site Supervisor, KeyNote, San Diego Youth Symphony</strong><br>
-    <em>2024–2025</em>
-    <ul class="exp-details">
-      <li>Led daily operations for music after-school programs at two schools.</li>
-      <li>Facilitated weekly team meetings to assess progress and support staff.</li>
-    </ul>
-    <div class="exp-photos">
-      <img src="images/keynote.png" alt="Community Project" />
-      <img src="images/keynote2.JPG" alt="Workshop Event" />
-    </div>
-  </li>
-  <div class="exp-divider"></div>
-  <li>
-    <strong>Recreation Specialist, The City of National City</strong><br>
-    <em>2023–2025</em>
-    <ul class="exp-details">
-      <li>Planned and implemented recreational programs for youth and families.</li>
-      <li>Collaborated with local organizations to enhance program offerings.</li>
-    </ul>
-    <div class="exp-photos">
-      <img src="images/nc1.JPG" alt="Community Project" />
-      <img src="images/Nc2.jpeg" alt="Workshop Event" />
-    </div>
-  </li>
-</ul>
-        <!-- Add more roles as needed -->
+      <ul>
+        <li>
+          <strong>Freelance Data & Research Specialist, Various Clients</strong><br>
+          <em>2020–Present</em>
+          <ul class="exp-details">
+            <li>Conduct data collection, cleaning, and validation for client projects.</li>
+            <li>Design interactive dashboards to visualize key performance indicators.</li>
+          </ul>
+          <div class="exp-photos">
+            <img src="images/upwork1.png" alt="reviews" />
+          </div>
+        </li>
+        <div class="exp-divider"></div>
+        <li>
+          <strong>Opus Site Supervisor, KeyNote, San Diego Youth Symphony</strong><br>
+          <em>2024–2025</em>
+          <ul class="exp-details">
+            <li>Led daily operations for music after-school programs at two schools.</li>
+            <li>Facilitated weekly team meetings to assess progress and support staff.</li>
+          </ul>
+          <div class="exp-photos">
+            <img src="images/keynote.png" alt="Community Project" />
+            <img src="images/keynote2.JPG" alt="Workshop Event" />
+          </div>
+        </li>
+        <div class="exp-divider"></div>
+        <li>
+          <strong>Recreation Specialist, The City of National City</strong><br>
+          <em>2023–2025</em>
+          <ul class="exp-details">
+            <li>Planned and implemented recreational programs for youth and families.</li>
+            <li>Collaborated with local organizations to enhance program offerings.</li>
+          </ul>
+          <div class="exp-photos">
+            <img src="images/nc1.JPG" alt="Community Project" />
+            <img src="images/Nc2.jpeg" alt="Workshop Event" />
+          </div>
+        </li>
       </ul>
     </section>
 
-	<!-- Volunteer Experience Section -->
-<section id="volunteer">
-  <h2>Volunteer Experience</h2>
-  <ul>
-    <li>
-  <strong>Specialist Volunteer, Worldpackers</strong><br>
-  <em>2019–2020</em>
-  <ul class="exp-details">
-    <li>Assisted 10+ small businesses in community-based tourism and education projects across South America.</li>
-    <li>Organized workshops and events to empower local entrepreneurs.</li>
-    <li>Facilitated cross-cultural exchanges and language learning activities.</li>
-  </ul>
-   <div class="exp-photos">
-    <img src="images/worldpackers.png" alt="Community Project" />
-  </div>
-</li>
-   <li>
-  <strong>Project Leader, Universidade Federal da Integração Latino-
-Americana, Brasil </strong><br>
-  <em>01/2019–12/2020</em>
-  <ul class="exp-details">
-    <li>Dedicated to empowering underprivileged communities in Brazil and Paraguay through organizing recreational activities for children.</li>
-    <li>Coordinated volunteer efforts and managed project logistics.</li>
-  </ul>
-  <div class="exp-photos">
-    <img src="images/FOZ1.jpg" alt="Community Project" />
-    <img src="images/FOZ2.jpg" alt="Workshop Event" />
-  </div>
-</li>
-    <!-- Add more volunteer roles as needed -->
-  </ul>
-</section>
+    <!-- Volunteer Experience Section -->
+    <section id="volunteer">
+      <h2>Volunteer Experience</h2>
+      <ul>
+        <li>
+          <strong>Specialist Volunteer, Worldpackers</strong><br>
+          <em>2019–2020</em>
+          <ul class="exp-details">
+            <li>Assisted 10+ small businesses in community-based tourism and education projects across South America.</li>
+            <li>Organized workshops and events to empower local entrepreneurs.</li>
+            <li>Facilitated cross-cultural exchanges and language learning activities.</li>
+          </ul>
+          <div class="exp-photos">
+            <img src="images/worldpackers.png" alt="Community Project" />
+          </div>
+        </li>
+        <div class="exp-divider"></div>
+        <li>
+          <strong>Project Leader, Universidade Federal da Integração Latino-Americana, Brasil</strong><br>
+          <em>01/2019–12/2020</em>
+          <ul class="exp-details">
+            <li>Dedicated to empowering underprivileged communities in Brazil and Paraguay through organizing recreational activities for children.</li>
+            <li>Coordinated volunteer efforts and managed project logistics.</li>
+          </ul>
+          <div class="exp-photos">
+            <img src="images/FOZ1.jpg" alt="Community Project" />
+            <img src="images/FOZ2.jpg" alt="Workshop Event" />
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <!-- Services Section -->
     <section id="services">
@@ -716,35 +697,39 @@ Americana, Brasil </strong><br>
         <li>Business Intelligence: Tableau & Microsoft Excel dashboards</li>
         <li>Data Cleaning & Preparation</li>
         <li>Project Coordination</li>
-		<li>Market Research</li>
-		<li>Data Visualization</li>
-		<li>AI & Machine Learning Support</li>
-	
-        <!-- Add more services as needed -->
+        <li>Market Research</li>
+        <li>Data Visualization</li>
+        <li>AI & Machine Learning Support</li>
       </ul>
     </section>
 
-  <!-- Contact Section -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    <strong>I’d love to hear from you!</strong> Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out using the form below or any of my contact links.
-  </p>
-  <form action="https://formspree.io/f/xlekwnle" method="POST">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" required>
-    <label for="email">Your email</label>
-    <input type="email" name="email" id="email" required>
-    <label for="message">Your message</label>
-    <textarea name="message" id="message" rows="4" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-  <div style="margin-top:2rem;">
-    <p>Email: <a href="mailto:data.ksaa@gmail.com">data.ksaa@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/katherinesaavedrac/">linkedin.com/in/katherinesaavedrac</a></p>
-    <p>Phone: <a href="tel:+18582811759">+1(858)281-1759</a></p>
-  </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <strong>I’d love to hear from you!</strong> Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out using the form below or any of my contact links.
+      </p>
+      <form action="https://formspree.io/f/xlekwnle" method="POST">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" required>
+        <label for="email">Your email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="message">Your message</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div style="margin-top:2rem; display:flex; gap:1.5rem; align-items:center;">
+        <a href="mailto:data.ksaa@gmail.com" title="Email">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gmail.svg" alt="Email" style="width:32px;vertical-align:middle;">
+        </a>
+        <a href="https://www.linkedin.com/in/katherinesaavedrac/" title="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn" style="width:32px;vertical-align:middle;">
+        </a>
+        <a href="tel:+18582811759" title="Phone">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/phone.svg" alt="Phone" style="width:32px;vertical-align:middle;">
+        </a>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer">
@@ -773,82 +758,92 @@ Americana, Brasil </strong><br>
     });
   </script>
   <script>
-  // Show TOC when nav disappears (scroll > 120px)
-  window.addEventListener('scroll', function() {
-    var nav = document.getElementById('nav');
-    var toc = document.getElementById('toc');
-    if (window.scrollY > 120) {
-      nav.style.opacity = '0';
-      toc.style.display = 'block';
-      toc.style.opacity = '1';
-    } else {
-      nav.style.opacity = '1';
-      toc.style.opacity = '0';
-      setTimeout(function() { toc.style.display = 'none'; }, 300);
-    }
-  });
-</script>
-<script>
-  // Highlight TOC item based on scroll position
-  const tocLinks = document.querySelectorAll('#toc ul li a');
-  const sections = [
-    'home', 'about', 'portfolio', 'experience', 'volunteer', 'services', 'contact'
-  ].map(id => document.getElementById(id));
-
-  function highlightTOC() {
-    let index = 0;
-    for (let i = 0; i < sections.length; i++) {
-      if (sections[i]) {
-        const rect = sections[i].getBoundingClientRect();
-        if (rect.top <= 80) index = i;
-      }
-    }
-    tocLinks.forEach((link, i) => {
-      if (i === index) {
-        link.classList.add('active');
+    // Show TOC when nav disappears (scroll > 120px)
+    window.addEventListener('scroll', function() {
+      var nav = document.getElementById('nav');
+      var toc = document.getElementById('toc');
+      if (window.scrollY > 120) {
+        nav.style.opacity = '0';
+        toc.style.display = 'block';
+        toc.style.opacity = '1';
       } else {
-        link.classList.remove('active');
+        nav.style.opacity = '1';
+        toc.style.opacity = '0';
+        setTimeout(function() { toc.style.display = 'none'; }, 300);
       }
     });
-  }
+  </script>
+  <script>
+    // Highlight TOC item based on scroll position
+    const tocLinks = document.querySelectorAll('#toc ul li a');
+    const sections = [
+      'home', 'about', 'portfolio', 'experience', 'volunteer', 'services', 'contact'
+    ].map(id => document.getElementById(id));
 
-  window.addEventListener('scroll', highlightTOC);
-  window.addEventListener('resize', highlightTOC);
-  document.addEventListener('DOMContentLoaded', highlightTOC);
-</script>
-<script>
-// Expand experience photos in modal
-document.querySelectorAll('.exp-photos img').forEach(function(img) {
-  img.style.cursor = 'pointer';
-  img.addEventListener('click', function(e) {
-    e.stopPropagation(); // Prevent bubbling to modal background
-    document.getElementById('imgModalImg').src = img.src;
-    document.getElementById('imgModalImg').alt = img.alt;
-    document.getElementById('imgModal').style.display = 'flex';
-  });
-});
+    function highlightTOC() {
+      let index = 0;
+      for (let i = 0; i < sections.length; i++) {
+        if (sections[i]) {
+          const rect = sections[i].getBoundingClientRect();
+          if (rect.top <= 80) index = i;
+        }
+      }
+      tocLinks.forEach((link, i) => {
+        if (i === index) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
 
-// Close modal when clicking close button
-document.getElementById('imgModalClose').onclick = function(e) {
-  e.stopPropagation();
-  document.getElementById('imgModal').style.display = 'none';
-  document.getElementById('imgModalImg').src = '';
-};
+    window.addEventListener('scroll', highlightTOC);
+    window.addEventListener('resize', highlightTOC);
+    document.addEventListener('DOMContentLoaded', highlightTOC);
+  </script>
+  <script>
+    // Expand experience photos in modal
+    document.querySelectorAll('.exp-photos img').forEach(function(img) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent bubbling to modal background
+        document.getElementById('imgModalImg').src = img.src;
+        document.getElementById('imgModalImg').alt = img.alt;
+        document.getElementById('imgModal').style.display = 'flex';
+      });
+    });
 
-// Close modal when clicking the background (not the image)
-document.getElementById('imgModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    this.style.display = 'none';
-    document.getElementById('imgModalImg').src = '';
-  }
-});
-</script>
+    // Expand portfolio images in modal
+    document.querySelectorAll('.project-card img').forEach(function(img) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        document.getElementById('imgModalImg').src = img.src;
+        document.getElementById('imgModalImg').alt = img.alt;
+        document.getElementById('imgModal').style.display = 'flex';
+      });
+    });
 
-<!-- Image Modal -->
-<div id="imgModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
-  <span id="imgModalClose" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;">&times;</span>
-  <img id="imgModalImg" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:18px;box-shadow:0 2px 24px rgba(0,123,182,0.25);">
-</div>
+    // Close modal when clicking close button
+    document.getElementById('imgModalClose').onclick = function(e) {
+      e.stopPropagation();
+      document.getElementById('imgModal').style.display = 'none';
+      document.getElementById('imgModalImg').src = '';
+    };
+
+    // Close modal when clicking the background (not the image)
+    document.getElementById('imgModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+        document.getElementById('imgModalImg').src = '';
+      }
+    });
+  </script>
+
+  <!-- Image Modal -->
+  <div id="imgModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
+    <span id="imgModalClose" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;">&times;</span>
+    <img id="imgModalImg" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:18px;box-shadow:0 2px 24px rgba(0,123,182,0.25);">
+  </div>
 </body>
-
 </html>
