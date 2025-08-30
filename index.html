@@ -840,10 +840,55 @@
     });
   </script>
 
-  <!-- Image Modal -->
-  <div id="imgModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
-    <span id="imgModalClose" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;">&times;</span>
-    <img id="imgModalImg" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:18px;box-shadow:0 2px 24px rgba(0,123,182,0.25);">
-  </div>
+ <!-- Image Modal -->
+<div id="imgModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
+  <span id="imgModalClose" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;">&times;</span>
+  <img id="imgModalImg" src="" alt="" style="max-width:90vw;max-height:80vh;border-radius:18px;box-shadow:0 2px 24px rgba(0,123,182,0.25);">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('imgModalImg');
+  const modalClose = document.getElementById('imgModalClose');
+
+  // Combine experience and portfolio images
+  const images = document.querySelectorAll('.exp-photos img, .project-card img');
+
+  images.forEach(function(img) {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function(e) {
+      e.stopPropagation(); // Prevent background click
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      modal.style.display = 'flex';
+    });
+  });
+
+  // Close modal with close button
+  modalClose.addEventListener('click', function(e) {
+    e.stopPropagation();
+    modal.style.display = 'none';
+    modalImg.src = '';
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
+  });
+
+  // Optional: close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === "Escape" && modal.style.display === 'flex') {
+      modal.style.display = 'none';
+      modalImg.src = '';
+    }
+  });
+});
+</script>
+
 </body>
 </html>
