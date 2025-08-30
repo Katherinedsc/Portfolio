@@ -58,6 +58,81 @@
       box-shadow: 0 2px 8px rgba(0,123,182,0.10);
       text-decoration: none;
     }
+    /* Split About Section Styles */
+    .about-split {
+      display: flex;
+      gap: 3rem;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 24px rgba(0,123,182,0.07);
+      padding: 3rem 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    .about-left {
+      flex: 1;
+      text-align: center;
+    }
+    .about-photo {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 2px 12px rgba(0,123,182,0.10);
+      margin-bottom: 1.5rem;
+    }
+    .about-left h2 {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      color: #0077b6;
+    }
+    .about-left h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #00b4d8;
+      font-weight: 600;
+    }
+    .about-social a {
+      color: #0077b6;
+      font-weight: 700;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .about-social a:hover {
+      color: #00b4d8;
+    }
+    .about-right {
+      flex: 2;
+    }
+    .about-right h2 {
+      font-size: 1.6rem;
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+    .about-right h3 {
+      font-size: 1.1rem;
+      color: #00b4d8;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills-list li {
+      background: #e0f7fa;
+      color: #0077b6;
+      padding: 0.5em 1em;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1em;
+    }
+    /* Portfolio grid */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -212,6 +287,16 @@
       background: linear-gradient(90deg, #00b4d8, #0077b6);
       transform: scale(1.05);
     }
+    @media (max-width: 900px) {
+      .about-split {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+      }
+      .about-left, .about-right {
+        text-align: center;
+      }
+    }
     @media (max-width: 700px) {
       #wrapper { padding: 1rem; }
       .projects-grid { gap: 1rem; }
@@ -242,12 +327,33 @@
       <a href="#portfolio" class="button project-link">View Portfolio</a>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate data analyst with a strong background in Python, R, SQL, Tableau, and Power BI. My approach combines curiosity, rigor, and empathy to deliver actionable insights. I value collaboration, transparency, and continuous learning.
-      </p>
+    <!-- Split About Me Section -->
+    <section id="about" class="about-split">
+      <div class="about-left">
+        <img src="images/your-photo.jpg" alt="Katherine Saavedra" class="about-photo" />
+        <h2>Katherine Saavedra</h2>
+        <h3>Data Analyst & BI Specialist</h3>
+        <div class="about-social">
+          <a href="mailto:data.ksaa@gmail.com">Email</a> |
+          <a href="https://www.linkedin.com/in/katherinesaavedrac/">LinkedIn</a>
+        </div>
+      </div>
+      <div class="about-right">
+        <h2>About Me</h2>
+        <p>
+          I turn data into actionable insights. With a background in Python, R, SQL, Tableau, and Power BI, I help teams make smarter decisions. My approach is collaborative, transparent, and always focused on impact.
+        </p>
+        <h3>Skills</h3>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>R</li>
+          <li>SQL</li>
+          <li>Tableau</li>
+          <li>Power BI</li>
+          <li>Data Visualization</li>
+          <li>Project Coordination</li>
+        </ul>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
