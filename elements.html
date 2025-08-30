@@ -7,6 +7,104 @@
 <html>
 
 <head>
+	<!-- Add after your Google Fonts link in <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+	.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #f7f9fb;
+    color: #222;
+  }
+  #wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,123,182,0.08);
+  }
+  section.post {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,123,182,0.10);
+    border: 1px solid rgba(200,200,200,0.2);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  section.post:hover {
+    box-shadow: 0 6px 24px rgba(0,123,182,0.18);
+    transform: translateY(-4px) scale(1.02);
+  }
+  h1, h2, h3, h4 {
+    color: #0077b6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 700;
+    margin-top: 1.5rem;
+  }
+  ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .skills-list span {
+    background: #00b4d8;
+    color: #fff;
+    padding: 0.3em 0.8em;
+    border-radius: 12px;
+    font-size: 0.95em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+  }
+  .image.left, .image.right {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,123,182,0.07);
+    margin: 1em;
+    max-width: 180px;
+  }
+  button, .button {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 0.7em 2em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,123,182,0.10);
+  }
+  button:hover, .button:hover {
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    transform: translateY(-2px) scale(1.04);
+  }
+  #copyright {
+    text-align: center;
+    color: #888;
+    font-size: 0.95em;
+    margin-top: 2rem;
+  }
+  @media (max-width: 800px) {
+  #wrapper {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  section.post {
+    padding: 1rem;
+  }
+  .image.left, .image.right {
+    max-width: 100px;
+  }
+}
+</style>
 	<title>Katherine's Resume</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -18,8 +116,8 @@
 
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+	<!-- Wrapper Add Fade-in Animation -->
+<div id="wrapper" class="fade-in">
 
 		<!-- Header -->
 		<header id="header">
@@ -45,6 +143,12 @@
 
 			<!-- Post -->
 			<section class="post">
+				<!-- Add a Professional Summary Card at the Top>, before Objectives -->
+<div style="background:rgba(255,255,255,0.85);border-radius:14px;box-shadow:0 2px 12px rgba(0,123,182,0.10);padding:1.5rem;margin-bottom:2rem;">
+  <h1 style="margin-bottom:0.5rem;">Katherine Saavedra</h1>
+  <h3 style="margin-bottom:1rem;">Business & Data Analyst</h3>
+  <p>Enthusiastic analyst driving strategic decisions and process optimization through advanced data analysis. Empowering stakeholders with actionable insights for success.</p>
+</div>
 				<header class="major">
 					<h1>Katherine<br />
 						Saavedra</h1>
@@ -123,26 +227,16 @@
 					</li>
 				</ul>
 
-
-
-					<!-- Lists -->
-					<h2>Skills</h2>
-					<div class="row">
-						<div class="col-6 col-12-small">
-
-							<h4>Data visualization:</h4>
-							<ul>
-								<li>Tableau</li>
-								<li>Power BI </li>
-							</ul>
-
-							<h4>Data analysis:</h4>
-							<ul class="alt">
-								<li>SQL</li>
-								<li>MS EXCEL</li>
-								<li>SPSS</li>
-							</ul>
-						</div>
+<!-- Replace your skills lists with: -->
+<div class="skills-list">
+  <span>Tableau</span>
+  <span>Power BI</span>
+  <span>SQL</span>
+  <span>MS Excel</span>
+  <span>SPSS</span>
+  <span>RStudio</span>
+  <span>Python</span>
+</div>
 						<div class="col-6 col-12-small">
 
 							<h4>Programming:</h4>
@@ -228,18 +322,11 @@
 					<hr />
 
 
-
-
-
-					<!-- Copyright -->
-					<div id="copyright">
-						<ul>
-							<li>&copy; Untitled</li>
-							<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-
-		</div>
+<!-- Modernize Footer -->
+<hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
+<div id="copyright">
+  &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
+</div>
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
