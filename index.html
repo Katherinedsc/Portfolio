@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
   <style>
+    /* Center Home Section Content */
+.home-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
 	/* Minimalistic icon bullets for experience details */
 .exp-details {
   margin: 0.5rem 0 1.5rem 0;
@@ -344,11 +353,11 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" style="text-align:center;">
-      <h1>Katherine Saavedra</h1>
-      <p>Welcome to my portfolio. I designed this site from the ground up to share my work, experience, and projects</p>
-      <a href="#portfolio" class="button project-link">View Portfolio</a>
-    </section>
+<section id="home" class="home-center">
+  <h1>Katherine Saavedra</h1>
+  <p>Welcome to my portfolio. I designed this site from the ground up to share my work, experience, and projects</p>
+  <a href="#portfolio" class="button project-link">View Portfolio</a>
+</section>
 
     <!-- Split About Me Section -->
     <section id="about" class="about-split">
@@ -511,19 +520,23 @@
   <h2>Volunteer Experience</h2>
   <ul>
     <li>
-      <strong>Specialist Volunteer, Worldpackers</strong><br>
-      <em>2019–2020</em><br>
-Assisted 10+ small businesses in community-based tourism
-and education projects across South America.
-    </li>
-    <li>
-      <strong>Project Leader, Universidade Federal da Integração Latino-
+  <strong>Specialist Volunteer, Worldpackers</strong><br>
+  <em>2019–2020</em>
+  <ul class="exp-details">
+    <li>Assisted 10+ small businesses in community-based tourism and education projects across South America.</li>
+    <li>Organized workshops and events to empower local entrepreneurs.</li>
+    <li>Facilitated cross-cultural exchanges and language learning activities.</li>
+  </ul>
+</li>
+   <li>
+  <strong>Project Leader, Universidade Federal da Integração Latino-
 Americana, Brasil </strong><br>
-      <em>2012–2012</em><br>
-Dedicated to empowering underprivileged communities in
-Brazil and Paraguay through organizing recreational activities
-for children.   
- </li>
+  <em>01/2019–12/2020</em>
+  <ul class="exp-details">
+    <li>Dedicated to empowering underprivileged communities in Brazil and Paraguay through organizing recreational activities for children.</li>
+    <li>Coordinated volunteer efforts and managed project logistics.</li>
+  </ul>
+</li>
     <!-- Add more volunteer roles as needed -->
   </ul>
 </section>
