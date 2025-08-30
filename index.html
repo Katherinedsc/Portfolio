@@ -794,25 +794,29 @@ Americana, Brasil </strong><br>
   document.addEventListener('DOMContentLoaded', highlightTOC);
 </script>
 <script>
-  // Expand experience photos in modal
-  document.querySelectorAll('.exp-photos img').forEach(function(img) {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', function() {
-      document.getElementById('imgModalImg').src = img.src;
-      document.getElementById('imgModalImg').alt = img.alt;
-      document.getElementById('imgModal').style.display = 'flex';
-    });
+// Expand experience photos in modal
+document.querySelectorAll('.exp-photos img').forEach(function(img) {
+  img.style.cursor = 'pointer';
+  img.addEventListener('click', function() {
+    document.getElementById('imgModalImg').src = img.src;
+    document.getElementById('imgModalImg').alt = img.alt;
+    document.getElementById('imgModal').style.display = 'flex';
   });
-  document.getElementById('imgModalClose').onclick = function() {
-    document.getElementById('imgModal').style.display = 'none';
+});
+
+// Close modal when clicking close button or outside the image
+document.getElementById('imgModalClose').onclick = function() {
+  document.getElementById('imgModal').style.display = 'none';
+  document.getElementById('imgModalImg').src = '';
+};
+
+document.getElementById('imgModal').addEventListener('click', function(e) {
+  // Only close if clicking the background, not the image itself
+  if (e.target === this || e.target === document.getElementById('imgModalImg')) {
+    this.style.display = 'none';
     document.getElementById('imgModalImg').src = '';
-  };
-  document.getElementById('imgModal').onclick = function(e) {
-    if (e.target === this) {
-      this.style.display = 'none';
-      document.getElementById('imgModalImg').src = '';
-    }
-  };
+  }
+});
 </script>
 <!-- Image Modal -->
 <div id="imgModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
