@@ -10,6 +10,29 @@
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
   <style>
+	/* Minimalistic icon bullets for experience details */
+.exp-details {
+  margin: 0.5rem 0 1.5rem 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.exp-details li {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding-left: 1.2em;
+  font-size: 0.98em;
+  color: #222;
+}
+
+.exp-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00b4d8;
+  font-size: 1.2em;
+  line-height: 1;
+}
     body {
       font-family: 'Montserrat', Arial, sans-serif;
       background: #fff;
@@ -445,40 +468,40 @@
     <section id="experience">
       <h2>Work Experience</h2>
       <ul>
-        <li>
-          <strong>Freelance Data & Research Specialist, Various Clients | Contract / Project-Based</strong><br>
-          <em>2020–Present</em><br>
-- Conduct data collection, cleaning, and validation to ensure high-quality, actionable
-datasets for client projects across technology, retail, and real estate sectors.
-- Perform statistical analyses and prepare tailored reports that inform strategic decision-
-making for 50+ clients.
-- Support AI initiatives by annotating and curating datasets, improving the accuracy of
-machine learning model training
-- Design and build interactive dashboards (Tableau, Excel) to visualize key performance
-indicators and business trends.
-- Communicate regularly with clients and cross-functional teams to align project goals
-and deliver timely results.        
+      <li>
+  <strong>Freelance Data & Research Specialist, Various Clients | Contract / Project-Based</strong><br>
+  <em>2020–Present</em>
+  <ul class="exp-details">
+    <li>Conduct data collection, cleaning, and validation for client projects across technology, retail, and real estate sectors.</li>
+    <li>Perform statistical analyses and prepare tailored reports for 50+ clients.</li>
+    <li>Support AI initiatives by annotating and curating datasets for machine learning.</li>
+    <li>Design interactive dashboards (Tableau, Excel) to visualize key performance indicators.</li>
+    <li>Communicate regularly with clients and cross-functional teams to align project goals.</li>
+  </ul>
 </li>
-        <li>
-          <strong>Opus Site Supervisor, KeyNote, Home of San Diego Youth Symphony</strong><br>
-          <em>2024–2025</em><br>
-- Lead daily operations for music after-school programs at two schools, overseeing 60+
-youth while optimizing resource allocation and facility management.
-- Facilitate weekly team meetings to assess progress, address program needs, and
-support staff development.
-- Oversee attendance tracking and monitor student engagement to support program
-evaluation and reporting.
-- Maintain detailed records and generate reports that inform administrative decision-
-making and team coordination.        
-</li>
+      <!-- Opus Site Supervisor, KeyNote, Home of San Diego Youth Symphony -->
 <li>
-          <strong>Recreation Specialisty, The City of National City</strong><br>
-          <em>2023–2025</em><br>
-          - Plan and implement recreational programs for youth and families.
-          - Collaborate with community organizations to enhance program offerings.
-          - Monitor program participation and gather feedback for continuous improvement.
-          - Maintain a safe and inclusive environment for all participants.
-        </li>
+  <strong>Opus Site Supervisor, KeyNote, Home of San Diego Youth Symphony</strong><br>
+  <em>2024–2025</em>
+  <ul class="exp-details">
+    <li>Led daily operations for music after-school programs at two schools, overseeing 60+ youth and optimizing resource allocation.</li>
+    <li>Facilitated weekly team meetings to assess progress, address program needs, and support staff development.</li>
+    <li>Oversaw attendance tracking and monitored student engagement to support program evaluation and reporting.</li>
+    <li>Maintained detailed records and generated reports to inform administrative decision-making and team coordination.</li>
+  </ul>
+</li>
+
+<!-- Recreation Specialist, The City of National City -->
+<li>
+  <strong>Recreation Specialist, The City of National City</strong><br>
+  <em>2023–2025</em>
+  <ul class="exp-details">
+    <li>Planned and implemented recreational programs for youth and families, fostering community engagement.</li>
+    <li>Collaborated with local organizations to enhance program offerings and outreach.</li>
+    <li>Monitored program participation and gathered feedback for continuous improvement.</li>
+    <li>Maintained a safe and inclusive environment for all participants.</li>
+  </ul>
+</li>
         <!-- Add more roles as needed -->
       </ul>
     </section>
