@@ -104,6 +104,18 @@
 </head>
 
 <body class="is-preload">
+	<!-- Loader -->
+<div id="loader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#f7f9fb;z-index:9999;">
+  <div style="width:48px;height:48px;border:6px solid #00b4d8;border-top:6px solid #fff;border-radius:50%;animation:spin 1s linear infinite;"></div>
+</div>
+<script>
+  window.addEventListener('load', function() {
+    document.getElementById('loader').style.display = 'none';
+  });
+</script>
+<style>
+@keyframes spin { 100% { transform: rotate(360deg); } }
+</style>
 
 	<!-- Wrapper -->
 	<div id="wrapper" class="fade-in">
