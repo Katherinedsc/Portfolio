@@ -9,6 +9,7 @@
   <noscript>
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
+
   <style>
 
     /* Dynamic Table of Contents */
@@ -38,9 +39,11 @@
   font-weight: 600;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.2s;
+  opacity: 0.25;
+  transition: opacity 0.5s, color 0.5s;
 }
-#toc ul li a:hover {
+#toc ul li a.active {
+  opacity: 1;
   color: #00b4d8;
 }
 @media (max-width: 900px) {
