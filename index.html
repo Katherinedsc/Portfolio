@@ -820,7 +820,8 @@ Americana, Brasil </strong><br>
 // Expand experience photos in modal
 document.querySelectorAll('.exp-photos img').forEach(function(img) {
   img.style.cursor = 'pointer';
-  img.addEventListener('click', function() {
+  img.addEventListener('click', function(e) {
+    e.stopPropagation(); // Prevent bubbling to modal background
     document.getElementById('imgModalImg').src = img.src;
     document.getElementById('imgModalImg').alt = img.alt;
     document.getElementById('imgModal').style.display = 'flex';
@@ -828,18 +829,21 @@ document.querySelectorAll('.exp-photos img').forEach(function(img) {
 });
 
 // Close modal when clicking close button
-document.getElementById('imgModalClose').onclick = function() {
+document.getElementById('imgModalClose').onclick = function(e) {
+  e.stopPropagation();
   document.getElementById('imgModal').style.display = 'none';
   document.getElementById('imgModalImg').src = '';
 };
 
-// Close modal when clicking anywhere in the modal (background or image)
+// Close modal when clicking the background (not the image)
 document.getElementById('imgModal').addEventListener('click', function(e) {
-  // Always close, no matter where you click inside the modal
-  this.style.display = 'none';
-  document.getElementById('imgModalImg').src = '';
+  if (e.target === this) {
+    this.style.display = 'none';
+    document.getElementById('imgModalImg').src = '';
+  }
 });
 </script>
+
 <!-- Image Modal -->
 <div id="imgModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.8);align-items:center;justify-content:center;">
   <span id="imgModalClose" style="position:absolute;top:32px;right:48px;font-size:2.5rem;color:#fff;cursor:pointer;">&times;</span>
