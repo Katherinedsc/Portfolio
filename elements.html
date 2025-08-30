@@ -1,342 +1,272 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-
 <head>
-	<!-- Add after your Google Fonts link in <head> -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<style>
-	.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
-}
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-  body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background: #f7f9fb;
-    color: #222;
-  }
-  #wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,123,182,0.08);
-  }
-  section.post {
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(8px);
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0,123,182,0.10);
-    border: 1px solid rgba(200,200,200,0.2);
-    margin-bottom: 2rem;
-    padding: 2rem;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
-  section.post:hover {
-    box-shadow: 0 6px 24px rgba(0,123,182,0.18);
-    transform: translateY(-4px) scale(1.02);
-  }
-  h1, h2, h3, h4 {
-    color: #0077b6;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 700;
-    margin-top: 1.5rem;
-  }
-  ul, ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .skills-list span {
-    background: #00b4d8;
-    color: #fff;
-    padding: 0.3em 0.8em;
-    border-radius: 12px;
-    font-size: 0.95em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    display: inline-block;
-  }
-  .image.left, .image.right {
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,123,182,0.07);
-    margin: 1em;
-    max-width: 180px;
-  }
-  button, .button {
-    background: linear-gradient(90deg, #0077b6, #00b4d8);
-    color: #fff;
-    border: none;
-    border-radius: 24px;
-    padding: 0.7em 2em;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    transition: background 0.2s, transform 0.2s;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,123,182,0.10);
-  }
-  button:hover, .button:hover {
-    background: linear-gradient(90deg, #00b4d8, #0077b6);
-    transform: translateY(-2px) scale(1.04);
-  }
-  #copyright {
-    text-align: center;
-    color: #888;
-    font-size: 0.95em;
-    margin-top: 2rem;
-  }
-  @media (max-width: 800px) {
-  #wrapper {
-    padding: 1rem;
-    max-width: 100%;
-  }
-  section.post {
-    padding: 1rem;
-  }
-  .image.left, .image.right {
-    max-width: 100px;
-  }
-}
-</style>
-	<title>Katherine's Resume</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f7f9fb;
+      color: #222;
+    }
+    #wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,123,182,0.08);
+    }
+    section.post {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,123,182,0.10);
+      border: 1px solid rgba(200,200,200,0.2);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    section.post:hover {
+      box-shadow: 0 6px 24px rgba(0,123,182,0.18);
+      transform: translateY(-4px) scale(1.02);
+    }
+    h1, h2, h3, h4 {
+      color: #0077b6;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.7rem;
+    }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.4rem; }
+    h3 { font-size: 1.1rem; }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .skills-list {
+      margin: 1.5rem 0;
+    }
+    .skills-list span {
+      background: #00b4d8;
+      color: #fff;
+      padding: 0.3em 0.8em;
+      border-radius: 12px;
+      font-size: 0.95em;
+      margin-right: 0.5em;
+      margin-bottom: 0.5em;
+      display: inline-block;
+    }
+    .image.left, .image.right {
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,123,182,0.07);
+      margin: 1em;
+      max-width: 180px;
+    }
+    button, .button {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      padding: 0.7em 2em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, transform 0.2s;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,123,182,0.10);
+    }
+    button:hover, .button:hover {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      transform: translateY(-2px) scale(1.04);
+    }
+    #copyright {
+      text-align: center;
+      color: #888;
+      font-size: 0.95em;
+      margin-top: 2rem;
+    }
+    @media (max-width: 800px) {
+      #wrapper { padding: 1rem; max-width: 100%; }
+      section.post { padding: 1rem; }
+      .image.left, .image.right { max-width: 100px; }
+    }
+    .contact-icons {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-icons a {
+      color: #0077b6;
+      margin-right: 1em;
+      font-size: 1.5em;
+      transition: transform 0.2s;
+    }
+    .contact-icons a:hover {
+      color: #00b4d8;
+      transform: scale(1.2);
+    }
+  </style>
+  <title>Katherine's Resume</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
 </head>
 
 <body class="is-preload">
+  <div id="wrapper" class="fade-in">
 
-	<!-- Wrapper Add Fade-in Animation -->
-<div id="wrapper" class="fade-in">
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">Katherine Saavedra</a>
+    </header>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="logo">Katherine Saavedra</a>
-		</header>
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">Projects</a></li>
+        <li class="active"><a href="elements.html">Katherine's Resume</a></li>
+      </ul>
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"></a>
+        <a href="https://github.com/Katherinedsc" target="_blank" class="icon brands fa-github" title="GitHub"></a>
+        <a href="https://twitter.com/kathedsc" target="_blank" class="icon brands fa-twitter" title="Twitter"></a>
+      </div>
+    </nav>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="index.html">Projects</a></li>
-				<li class="active"><a href="elements.html">Katherine's Resume</a></li>
-			</ul>
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank"class="icon brands fa-Linkedin"><span
-							class="label">Linkedin</span></a></li>
-				<li><a href="https://github.com/Katherinedsc" target="_blank"class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-			</ul>
-		</nav>
+    <!-- Main -->
+    <div id="main">
+      <section class="post">
+        <!-- Professional Summary Card -->
+        <div style="background:rgba(255,255,255,0.85);border-radius:14px;box-shadow:0 2px 12px rgba(0,123,182,0.10);padding:1.5rem;margin-bottom:2rem;">
+          <h1>Katherine Saavedra</h1>
+          <h3>Business & Data Analyst</h3>
+          <p>Business Analyst with a Master’s degree in Business Analytics, fluent in English and Spanish. Experienced consultant supporting clients with market research, data analytics, and actionable insights. Skilled in Python, RStudio, Tableau, Power BI, and Excel. Passionate about transforming data into strategic decisions and process improvements.</p>
+        </div>
 
-		<!-- Main -->
-		<div id="main">
+        <!-- Objectives -->
+        <h2>Objectives</h2>
+        <p>Drive strategic decisions and process optimization through advanced data analysis. Empower stakeholders with confident choices and deliver actionable insights for success.</p>
 
-			<!-- Post -->
-			<section class="post">
-				<!-- Add a Professional Summary Card at the Top>, before Objectives -->
-<div style="background:rgba(255,255,255,0.85);border-radius:14px;box-shadow:0 2px 12px rgba(0,123,182,0.10);padding:1.5rem;margin-bottom:2rem;">
-  <h1 style="margin-bottom:0.5rem;">Katherine Saavedra</h1>
-  <h3 style="margin-bottom:1rem;">Business & Data Analyst</h3>
-  <p>Enthusiastic analyst driving strategic decisions and process optimization through advanced data analysis. Empowering stakeholders with actionable insights for success.</p>
-</div>
-				<header class="major">
-					<h1>Katherine<br />
-						Saavedra</h1>
-				</header>
+        <!-- Skills -->
+        <h2>Skills</h2>
+        <div class="skills-list">
+          <span>Python</span>
+          <span>RStudio</span>
+          <span>Tableau</span>
+          <span>Power BI</span>
+          <span>SQL</span>
+          <span>MS Excel</span>
+          <span>SPSS</span>
+        </div>
 
-				<!-- Text stuff -->
-				<h2>Objectives</h2>
-				<p> Enthusiastic and detail-oriented analyst driving strategic decisions and process optimization through advanced data analysis.
-					Empowering stakeholders with confident choices and delivering actionable insights for remarkable success.</p>
+        <!-- Experience -->
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <h3>Bilingual Data Analyst & Market Research Specialist</h3>
+            <p><strong>Freelance Consultant (Upwork, Utest)</strong> | <em>Nov 2020 - Jun 2023</em></p>
+            <ul>
+              <li>Conducted comprehensive market research and data analysis for global clients.</li>
+              <li>Developed dashboards using RStudio, Python (Matplotlib, Seaborn, Plotly), Tableau, and Power BI.</li>
+              <li>Executed manual testing scenarios for AI projects and documented functional testing processes.</li>
+              <li>Collaborated remotely with international teams via Upwork and Utest.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>ICE Course Facilitator</h3>
+            <p><strong>University of Galway, Ireland</strong> | <em>Jan 2022 - May 2022</em></p>
+            <ul>
+              <li>Led online sessions for students and business mentors, fostering innovative business ideas.</li>
+              <li>Managed student progress and coordinated resources for a cohesive learning environment.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Supervisor</h3>
+            <p><strong>Causa & Efecto Producciones</strong> | <em>Sep 2016 - Nov 2018</em></p>
+            <ul>
+              <li>Created dashboards and reports, monitored KPIs, and identified improvement opportunities.</li>
+              <li>Supervised part-time employees, ensuring safety, quality, and productivity.</li>
+              <li>Conducted post-project evaluations to assess performance and improvements.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Intern</h3>
+            <p><strong>Santander Bank</strong> | <em>Jan 2016 - Mar 2016</em></p>
+            <ul>
+              <li>Maintained customer records and performed accurate data entry and verification.</li>
+              <li>Resolved financial inquiries, improving customer satisfaction.</li>
+              <li>Completed time-sensitive projects, consistently meeting deadlines.</li>
+            </ul>
+          </li>
+        </ul>
 
+        <!-- Education -->
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <h3>Master's Degree in Business Analytics</h3>
+            <p><strong>University of Galway, Ireland</strong> | <em>Sep 2021 - Aug 2022</em></p>
+          </li>
+          <li>
+            <h3>Bachelor's Degree in Business Management</h3>
+            <p><strong>Universidad Austral de Chile</strong> | <em>Mar 2013 - Sep 2018</em></p>
+          </li>
+        </ul>
 
+        <!-- Cover Letter -->
+        <h2>Cover Letter</h2>
+        <p>
+          <span class="image left"><img src="images/AIvsPhotographer9845.jpg" alt="Katherine working with AI" /></span>
+          Hello, I’m Katherine, a Business Analyst with a Master’s degree from the University of Galway. For the past three years, I've assisted clients with market research, data analytics, and data processing. I excel in programming with RStudio and Python, and create impactful visualizations using Tableau, Power BI, and Excel. My work spans various industries, applying analytical skills to inform business strategies. I thrive on challenges and enjoy making a significant impact through insightful analysis and effective communication.
+        </p>
+        <p>
+          <span class="image right"><img src="images/AB.jpg" alt="Katherine Saavedra" /></span>
+          With a strong analytical mindset and keen eye for detail, I am eager to continue developing my skills in data analysis and visualization to support team success. I look forward to discussing my qualifications further.<br>
+          <strong>Sincerely,<br>Katherine Saavedra.</strong>
+        </p>
 
-				<header>
-					<h2>Experience</h2>
-					<ul>
-						<li>
-							<h3>Bilingual Data Analyst & Market Research Specialist</h3>
-							<p><strong>Freelance Consultant - Contract- Clients: Upwork, Utest. </strong></p>
-							<p><em>11/2020 - 06/2023</em></p>
-							<ul>
-								<li>Conducted comprehensive market research by collecting, organizing,
-									and analyzing industry-specific data.</li>
-								<li>Designed and developed data dashboards using several tools and
-									libraries, including RStudio, Python ( with libraries like Matplotlib,
-									Seaborn, and Plotly), Tableau, and Power BI. </li>
-								<li>Developed and executed various manual testing scenarios for AI
-									projects on human behavior recognition using (iOS) and exceptionally
-									document the process to perform functional testing of the application.</li>
-								<li>Utilized global work platforms such as Upwork and Utest to
-									collaborate remotely with companies worldwide</li>
-							</ul>
-						</li>
+        <!-- Contact Form -->
+        <hr />
+        <h2>Leave a Message</h2>
+        <form action="https://formspree.io/f/xlekwnle" method="POST">
+          <label>
+            Full Name
+            <input type="text" name="name" id="full-name">
+          </label>
+          <label>
+            Your Email
+            <input type="email" name="email">
+          </label>
+          <label>
+            Your Message
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
 
+    <!-- Footer -->
+    <hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
+    <div id="copyright">
+      &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
+    </div>
+  </div>
 
-						<li>
-							<h3>ICE Course Facilitator</h3>
-							<p><strong>University of Galway, Ireland.</strong></p>
-							<p><em>01/2022 - 05/2022</em></p>
-							<ul>
-								<li>Conducted online sessions for 20 students and their business mentors,
-									fostering the development of exceptional business ideas.</li>
-								<li>Managed student progress with a comprehensive database and timely
-									follow-up. </li>
-								<li>Collaborated with other facilitators to coordinate resources and ensure
-									a cohesive learning environment.</li>
-							</ul>
-						</li>
-
-
-						<li>
-							<h3>Supervisor</h3>
-							<p><strong>Causa & Efecto producciones</strong></p>
-							<p><em>09/2016 - 11/2018</em></p>
-							<ul>
-								<li>Proficient in data analysis and reporting, creating dashboards and 3+
-									weekly reports, and monitoring KPIs for improvement opportunities</li>
-								<li>Trained and supervised 10 part-time employees, ensuring safety and
-									quality assurance adherence and boosting productivity and
-									efficiency.</li>
-								<li>Conducted post-project evaluations to assess performance and
-									identify improvement areas.</li>
-							</ul>
-						</li>
-		<li>
-						<h3>Intern</h3>
-						<p><strong>Santander Bank</strong></p>
-						<p><em>01/2016 - 03/2016</em></p>
-						<ul>
-							<li>Conducted efficient and accurate data entry, verification, and
-								maintenance of customer records.</li>
-							<li>Formulated clear responses to intricate financial inquiries, boosting
-								customer satisfaction by 20% through effective communication.</li>
-							<li>Completed 10+ time-sensitive projects, consistently meeting tight
-								deadlines and achieving 100% project delivery success.</li>
-						</ul>
-					</li>
-				</ul>
-
-<!-- Replace your skills lists with: -->
-<div class="skills-list">
-  <span>Tableau</span>
-  <span>Power BI</span>
-  <span>SQL</span>
-  <span>MS Excel</span>
-  <span>SPSS</span>
-  <span>RStudio</span>
-  <span>Python</span>
-</div>
-						<div class="col-6 col-12-small">
-
-							<h4>Programming:</h4>
-							<ul class="alt">
-								<li>RStudio</li>
-								<li>Pyhton</li>
-							</ul>
-
-							<h4>Social Media </h4>
-							<ul class="icons alt">
-								<li><a href="https://twitter.com/kathedsc" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">Linkedin</span></a>
-								</li>
-								<li><a href="https://github.com/Katherinedsc" target="_blank"class="icon brands alt fa-github"><span class="label">Github</span></a></li>
-								
-							</ul>
-
-						</div>
-					</div>
-					<h2>Education</h2>
-					<ul>
-						<li>
-							<h3>Master's Degree in Business Analytics</h3>
-							<p><strong>University of Galway, Ireland</strong></p>
-							<p><em>09/2021 - 08/2022 </em></p>
-						</li>
-
-						<li>
-							<h3>Bachelor's Degree in Business Management</h3>
-							<p><strong>Universidad Austral de Chile
-								</strong></p>
-							<p><em>03/2013 - 09/2018</em></p>
-						</li>
-					</ul>
-
-					<p> </p>
-					<p style="margin-bottom: 10px;"> .</p>
-
-					<!-- Cover letter-->
-
-					<h3>Cover letter</h3>
-					<p><span class="image left"><img src="images/AIvsPhotographer9845.jpg" alt="" /></span>Hello, I’m Katherine, a Business Analyst with a Master’s degree from the National University of Galway, fluent in English and Spanish. 
-						For the past three years, I've been working as a consultant, during which I've had the opportunity to assist various clients with their data needs. 
-						My professional journey has been marked by robust engagement with market research, data analytics, identifying market trends, as well as data cleaning and processing. 
-						I excel in programming with tools such as RStudio and Python, and I’m skilled at creating powerful visualizations using Tableau, Power BI, and Excel. 
-						My work spans various industries, applying my analytical skills to extract and interpret data that informs and drives business strategies. 
-						I thrive on challenges that enhance my skills and allow me to make a significant impact through insightful analysis and effective communication 
-					</p>
-
-					<h3></h3>
-					<p><span class="image right"><img src="images/AB.jpg" alt="" /></span> With a strong analytical mindset and a keen eye for detail, I am eager to continue developing my skills in data analysis and visualization to support team success. 
-						 
-						I look forward to the opportunity to discuss my qualifications further.
-
-						Sincerely,
-						Katherine Saavedra.
-					</p>
-
-					<hr />
-
-
-
-					<!-- Form -->
-					<h2>Leave a message</h2>
-					<!-- modify this form HTML and place wherever you want your form -->
-					<form action="https://formspree.io/f/xlekwnle" method="POST">
-						<label>
-							Full Name
-							<input type="text" name="name" id="full-name">
-						</label>
-						<label>
-							Your email:
-							<input type="email" name="email">
-						</label>
-						<label>
-							Your message:
-							<textarea name="message"></textarea>
-						</label>
-						<!-- your other form fields go here -->
-						<button type="submit">Send</button>
-					</form>
-
-					<hr />
-
-
-<!-- Modernize Footer -->
-<hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
-<div id="copyright">
-  &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
-</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
