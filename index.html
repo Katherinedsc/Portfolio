@@ -671,6 +671,34 @@ Americana, Brasil </strong><br>
     }
   });
 </script>
+<script>
+  // Highlight TOC item based on scroll position
+  const tocLinks = document.querySelectorAll('#toc ul li a');
+  const sections = [
+    'home', 'about', 'portfolio', 'experience', 'volunteer', 'services', 'contact'
+  ].map(id => document.getElementById(id));
+
+  function highlightTOC() {
+    let index = 0;
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i]) {
+        const rect = sections[i].getBoundingClientRect();
+        if (rect.top <= 80) index = i;
+      }
+    }
+    tocLinks.forEach((link, i) => {
+      if (i === index) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', highlightTOC);
+  window.addEventListener('resize', highlightTOC);
+  document.addEventListener('DOMContentLoaded', highlightTOC);
+</script>
 </body>
 
 </html>
