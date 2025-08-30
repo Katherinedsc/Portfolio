@@ -1,11 +1,18 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Data Insights by Katherine Saavedra</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
   <style>
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      background: #fff; /* pure white background */
+      background: #fff;
       color: #222;
     }
     #wrapper {
@@ -15,6 +22,41 @@
       background: #fff;
       border-radius: 0;
       box-shadow: none;
+    }
+    #nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,123,182,0.07);
+      background: none;
+      padding: 0;
+    }
+    #nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #nav ul li a {
+      font-weight: 700;
+      color: #0077b6;
+      padding: 0.5rem 1.2rem;
+      border-radius: 16px;
+      background: none;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+    }
+    #nav ul li a:hover,
+    #nav ul li.active a {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0,123,182,0.10);
+      text-decoration: none;
     }
     .projects-grid {
       display: grid;
@@ -71,7 +113,7 @@
       margin-bottom: 1rem;
       text-align: center;
     }
-    .project-link {
+    .project-link, .button {
       background: linear-gradient(90deg, #0077b6, #00b4d8);
       color: #fff;
       border: none;
@@ -83,8 +125,90 @@
       transition: background 0.2s, transform 0.2s;
       box-shadow: 0 2px 8px rgba(0,123,182,0.10);
       display: inline-block;
+      margin-top: 0.5rem;
     }
-    .project-link:hover {
+    .project-link:hover, .button:hover {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      transform: scale(1.05);
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h1, h2 {
+      color: #0077b6;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+    #footer {
+      background: #f8f9fa;
+      color: #555;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #eee;
+      margin-top: 3rem;
+      border-radius: 0 0 14px 14px;
+    }
+    #footer a {
+      color: #0077b6;
+      text-decoration: underline;
+    }
+    #footer a:hover {
+      color: #00b4d8;
+    }
+    #copyright {
+      color: #aaa;
+      font-size: 0.9rem;
+      text-align: center;
+      margin: 2rem auto 1rem auto;
+      padding-bottom: 1rem;
+    }
+    /* Contact form styles */
+    #contact form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,123,182,0.07);
+    }
+    #contact label {
+      font-weight: 600;
+      color: #0077b6;
+      margin-bottom: 0.3rem;
+    }
+    #contact input, #contact textarea {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 1rem;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 0.6em 1em;
+      background: #fff;
+      color: #222;
+      transition: border-color 0.2s;
+      margin-bottom: 0.5rem;
+    }
+    #contact input:focus, #contact textarea:focus {
+      border-color: #00b4d8;
+      outline: none;
+    }
+    #contact button {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      padding: 0.5em 1.2em;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,123,182,0.10);
+      margin-top: 0.5rem;
+    }
+    #contact button:hover {
       background: linear-gradient(90deg, #00b4d8, #0077b6);
       transform: scale(1.05);
     }
@@ -92,172 +216,159 @@
       #wrapper { padding: 1rem; }
       .projects-grid { gap: 1rem; }
       .project-card { padding: 1rem; }
+      #nav ul { gap: 1rem; }
+      #nav ul li a { padding: 0.5rem 0.7rem; font-size: 0.95rem; }
     }
   </style>
-  <title>Data Insights by Katherine Saavedra</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript>
-    <link rel="stylesheet" href="assets/css/noscript.css" />
-  </noscript>
 </head>
-
-<body class="is-preload">
+<body>
   <div id="wrapper">
-    <div id="wrapper">
-  <!-- Modern Navigation Menu -->
-  <nav id="nav">
-    <ul>
-      <li class="active"><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#experience">Work Experience</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Modern Navigation Menu -->
+    <nav id="nav">
+      <ul>
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#experience">Work Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Home Section -->
-  <section id="home" style="text-align:center; margin-bottom:3rem;">
-    <h1>Katherine Saavedra</h1>
-    <p>Data-driven professional. Turning analytics into impact.</p>
-    <a href="#portfolio" class="button project-link">View Portfolio</a>
-  </section>
+    <!-- Home Section -->
+    <section id="home" style="text-align:center;">
+      <h1>Katherine Saavedra</h1>
+      <p>Data-driven professional. Turning analytics into impact.</p>
+      <a href="#portfolio" class="button project-link">View Portfolio</a>
+    </section>
 
-  <!-- About Me Section -->
-  <section id="about" style="margin-bottom:3rem;">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate data analyst with a strong background in Python, R, SQL, Tableau, and Power BI. My approach combines curiosity, rigor, and empathy to deliver actionable insights. I value collaboration, transparency, and continuous learning.
-    </p>
-  </section>
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate data analyst with a strong background in Python, R, SQL, Tableau, and Power BI. My approach combines curiosity, rigor, and empathy to deliver actionable insights. I value collaboration, transparency, and continuous learning.
+      </p>
+    </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio" style="margin-bottom:3rem;">
-    <h2>Portfolio / Projects</h2>
-    <div class="projects-grid">
-      <!-- Python Project -->
-      <div class="project-card">
-        <img src="images/PYTHON.jpg" alt="Python Project" />
-        <div class="project-title">Data Exploration in Python</div>
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Data Analysis</span>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <h2>Portfolio / Projects</h2>
+      <div class="projects-grid">
+        <!-- Python Project -->
+        <div class="project-card">
+          <img src="images/PYTHON.jpg" alt="Python Project" />
+          <div class="project-title">Data Exploration in Python</div>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Data Analysis</span>
+          </div>
+          <div class="project-desc">Context: Business data exploration.<br>Your role: Data analyst.<br>Impact: Automated reporting and actionable insights.</div>
+          <a href="https://katherinedsc.github.io/Python-Project-/titanic-analisis.html" class="project-link">View Project</a>
         </div>
-        <div class="project-desc">Context: Business data exploration.<br>Your role: Data analyst.<br>Impact: Automated reporting and actionable insights.</div>
-        <a href="https://katherinedsc.github.io/Python-Project-/titanic-analisis.html" class="project-link">View Project</a>
-      </div>
-      <!-- SQL Project -->
-      <div class="project-card">
-        <img src="images/sql.jpg" alt="SQL Project" />
-        <div class="project-title">Data Cleaning in SQL</div>
-        <div class="project-tags">
-          <span>SQL</span>
-          <span>Data Analysis</span>
+        <!-- SQL Project -->
+        <div class="project-card">
+          <img src="images/sql.jpg" alt="SQL Project" />
+          <div class="project-title">Data Cleaning in SQL</div>
+          <div class="project-tags">
+            <span>SQL</span>
+            <span>Data Analysis</span>
+          </div>
+          <div class="project-desc">Context: Raw sales data.<br>Your role: Data analyst.<br>Impact: Improved data quality for business decisions.</div>
+          <a href="#" class="project-link">View Project</a>
         </div>
-        <div class="project-desc">Context: Raw sales data.<br>Your role: Data analyst.<br>Impact: Improved data quality for business decisions.</div>
-        <a href="#" class="project-link">View Project</a>
-      </div>
-      <!-- Tableau Project -->
-      <div class="project-card">
-        <img src="images/Tableau-Logo.png" alt="Tableau Project" />
-        <div class="project-title">Tableau Projects</div>
-        <div class="project-tags">
-          <span>Tableau</span>
-          <span>Data Analysis</span>
+        <!-- Tableau Project -->
+        <div class="project-card">
+          <img src="images/Tableau-Logo.png" alt="Tableau Project" />
+          <div class="project-title">Tableau Projects</div>
+          <div class="project-tags">
+            <span>Tableau</span>
+            <span>Data Analysis</span>
+          </div>
+          <div class="project-desc">Context: Executive dashboards.<br>Your role: Visualization specialist.<br>Impact: Enhanced stakeholder understanding.</div>
+          <a href="https://public.tableau.com/app/profile/katherine1469" class="project-link">View Projects</a>
         </div>
-        <div class="project-desc">Context: Executive dashboards.<br>Your role: Visualization specialist.<br>Impact: Enhanced stakeholder understanding.</div>
-        <a href="https://public.tableau.com/app/profile/katherine1469" class="project-link">View Projects</a>
-      </div>
-      <!-- Power BI Project -->
-      <div class="project-card">
-        <img src="images/powerbi.jpg.webp" alt="Power BI Project" />
-        <div class="project-title">Power BI Visualizations</div>
-        <div class="project-tags">
-          <span>Power BI</span>
-          <span>Data Analysis</span>
+        <!-- Power BI Project -->
+        <div class="project-card">
+          <img src="images/powerbi.jpg.webp" alt="Power BI Project" />
+          <div class="project-title">Power BI Visualizations</div>
+          <div class="project-tags">
+            <span>Power BI</span>
+            <span>Data Analysis</span>
+          </div>
+          <div class="project-desc">Context: Financial reporting.<br>Your role: Dashboard creator.<br>Impact: Faster, clearer reporting.</div>
+          <a href="#" class="project-link">View Project</a>
         </div>
-        <div class="project-desc">Context: Financial reporting.<br>Your role: Dashboard creator.<br>Impact: Faster, clearer reporting.</div>
-        <a href="#" class="project-link">View Project</a>
-      </div>
-      <!-- RStudio Project -->
-      <div class="project-card">
-        <img src="images/r-studio.jpg.webp" alt="RStudio Project" />
-        <div class="project-title">RStudio</div>
-        <div class="project-tags">
-          <span>RStudio</span>
-          <span>Data Analysis</span>
+        <!-- RStudio Project -->
+        <div class="project-card">
+          <img src="images/r-studio.jpg.webp" alt="RStudio Project" />
+          <div class="project-title">RStudio</div>
+          <div class="project-tags">
+            <span>RStudio</span>
+            <span>Data Analysis</span>
+          </div>
+          <div class="project-desc">Context: Customer reviews analysis.<br>Your role: Data scientist.<br>Impact: Identified key trends for marketing.</div>
+          <a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="project-link">View Project</a>
         </div>
-        <div class="project-desc">Context: Customer reviews analysis.<br>Your role: Data scientist.<br>Impact: Identified key trends for marketing.</div>
-        <a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="project-link">View Project</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Work Experience Section -->
-  <section id="experience" style="margin-bottom:3rem;">
-    <h2>Work Experience</h2>
-    <ul>
-      <li>
-        <strong>Part-Time Data Analyst, XYZ Corp</strong><br>
-        <em>2023–2024</em><br>
-        Collaborated with teams to deliver insights and automate reporting.
-      </li>
-      <li>
-        <strong>Analytics Coordinator, ABC Inc</strong><br>
-        <em>2022–2023</em><br>
-        Led data quality initiatives and supported business strategy.
-      </li>
-      <!-- Add more roles as needed -->
-    </ul>
-  </section>
+    <!-- Work Experience Section -->
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <strong>Part-Time Data Analyst, XYZ Corp</strong><br>
+          <em>2023–2024</em><br>
+          Collaborated with teams to deliver insights and automate reporting.
+        </li>
+        <li>
+          <strong>Analytics Coordinator, ABC Inc</strong><br>
+          <em>2022–2023</em><br>
+          Led data quality initiatives and supported business strategy.
+        </li>
+        <!-- Add more roles as needed -->
+      </ul>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services" style="margin-bottom:3rem;">
-    <h2>Services</h2>
-    <ul>
-      <li>Consulting: Data strategy and analytics</li>
-      <li>Business Intelligence: Tableau & Power BI dashboards</li>
-      <li>Data Cleaning & Preparation</li>
-      <li>Project Coordination</li>
-      <!-- Add more services as needed -->
-    </ul>
-  </section>
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li>Consulting: Data strategy and analytics</li>
+        <li>Business Intelligence: Tableau & Power BI dashboards</li>
+        <li>Data Cleaning & Preparation</li>
+        <li>Project Coordination</li>
+        <!-- Add more services as needed -->
+      </ul>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" style="margin-bottom:3rem;">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xlekwnle" method="POST" style="max-width:400px;margin:auto;">
-      <label>
-        Full Name
-        <input type="text" name="name" id="full-name">
-      </label>
-      <label>
-        Your email:
-        <input type="email" name="email">
-      </label>
-      <label>
-        Your message:
-        <textarea name="message"></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
-    <div style="margin-top:2rem;">
-      <p>Email: <a href="mailto:data.ksaa@gmail.com">data.ksaa@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/katherinesaavedrac/">linkedin.com/in/katherinesaavedrac</a></p>
-      <p>Phone: +1(858)281-1759</p>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/xlekwnle" method="POST">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" required>
+        <label for="email">Your email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="message">Your message</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div style="margin-top:2rem;">
+        <p>Email: <a href="mailto:data.ksaa@gmail.com">data.ksaa@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/katherinesaavedrac/">linkedin.com/in/katherinesaavedrac</a></p>
+        <p>Phone: +1(858)281-1759</p>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer id="footer" style="margin-top:3rem;">
-    <hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
-    <div id="copyright" style="text-align:center; color:#888; font-size:0.95em;">
-      &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
-    </div>
-  </footer>
-</div>
+    <!-- Footer -->
+    <footer id="footer">
+      <hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
+      <div id="copyright">
+        &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net">HTML5 UP</a>
+      </div>
+    </footer>
+  </div>
 
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
