@@ -824,15 +824,15 @@ document.querySelectorAll('.exp-photos img').forEach(function(img) {
   });
 });
 
-// Close modal when clicking close button or outside the image
+// Close modal when clicking close button
 document.getElementById('imgModalClose').onclick = function() {
   document.getElementById('imgModal').style.display = 'none';
   document.getElementById('imgModalImg').src = '';
 };
 
+// Close modal when clicking the background (not the image)
 document.getElementById('imgModal').addEventListener('click', function(e) {
-  // Only close if clicking the background, not the image itself
-  if (e.target === this || e.target === document.getElementById('imgModalImg')) {
+  if (e.target === this) {
     this.style.display = 'none';
     document.getElementById('imgModalImg').src = '';
   }
