@@ -10,6 +10,44 @@
     <link rel="stylesheet" href="assets/css/noscript.css" />
   </noscript>
   <style>
+
+    /* Dynamic Table of Contents */
+#toc {
+  position: fixed;
+  top: 40px;
+  left: 32px;
+  width: 180px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,123,182,0.10);
+  padding: 1.2rem 1rem;
+  z-index: 1001;
+  display: none;
+  transition: opacity 0.3s;
+}
+#toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#toc ul li {
+  margin-bottom: 1rem;
+}
+#toc ul li a {
+  color: #0077b6;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+#toc ul li a:hover {
+  color: #00b4d8;
+}
+@media (max-width: 900px) {
+  #toc {
+    display: none !important;
+  }
+}
     /* Center Home Section Content */
 .home-center {
   display: flex;
@@ -351,6 +389,18 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <!-- Dynamic Table of Contents -->
+<nav id="toc">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#experience">Work Experience</a></li>
+    <li><a href="#volunteer">Volunteer Experience</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
     <!-- Home Section -->
 <section id="home" class="home-center">
@@ -596,10 +646,28 @@ Americana, Brasil </strong><br>
   <a href="#top" id="backToTop" style="position:fixed;bottom:32px;right:32px;background:#0077b6;color:#fff;padding:12px 18px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:24px;text-align:center;display:none;z-index:1000;transition:background 0.2s;">
     ↑
   </a>
+  <!-- Show/hide the back-to-top button when the user scrolls past 300px -->
   <script>
     window.addEventListener('scroll', function() {
       document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
     });
   </script>
+  <script>
+  // Show TOC when nav disappears (scroll > 120px)
+  window.addEventListener('scroll', function() {
+    var nav = document.getElementById('nav');
+    var toc = document.getElementById('toc');
+    if (window.scrollY > 120) {
+      nav.style.opacity = '0';
+      toc.style.display = 'block';
+      toc.style.opacity = '1';
+    } else {
+      nav.style.opacity = '1';
+      toc.style.opacity = '0';
+      setTimeout(function() { toc.style.display = 'none'; }, 300);
+    }
+  });
+</script>
 </body>
+
 </html>
