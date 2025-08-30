@@ -11,7 +11,22 @@
   </noscript>
 
   <style>
-    /* Center Home Section Content */
+    /* Subtle Divider for experience entries */
+    .exp-photos img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(0,123,182,0.18);
+}
+
+/* Divider for experience entries */
+.exp-divider {
+  width: 100%;
+  height: 1px;
+  background: #eee;
+  margin: 2rem 0;
+  border-radius: 1px;
+}
+
+/* Center Home Section Content */
 .home-center {
   display: flex;
   flex-direction: column;
@@ -57,17 +72,26 @@
 /* CSS for photo styling */
 .exp-photos {
   display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
+  gap: 1.5rem;
+  margin: 1.5rem 0 0.5rem 0;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
+
 .exp-photos img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,123,182,0.10);
-  border: 1px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,123,182,0.12);
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #f8f9fa;
+}
+
+.exp-photos img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(0,123,182,0.18);
 }
 
     /* Dynamic Table of Contents */
@@ -595,51 +619,46 @@
     <!-- Work Experience Section -->
     <section id="experience">
       <h2>Work Experience</h2>
-      <ul>
-      <li>
-  <strong>Freelance Data & Research Specialist, Various Clients | Contract / Project-Based</strong><br>
-  <em>2020–Present</em>
-  <ul class="exp-details">
-    <li>Conduct data collection, cleaning, and validation for client projects across technology, retail, and real estate sectors.</li>
-    <li>Perform statistical analyses and prepare tailored reports for 50+ clients.</li>
-    <li>Support AI initiatives by annotating and curating datasets for machine learning.</li>
-    <li>Design interactive dashboards (Tableau, Excel) to visualize key performance indicators.</li>
-    <li>Communicate regularly with clients and cross-functional teams to align project goals.</li>
-  </ul>
-</li>
-      <!-- Opus Site Supervisor, KeyNote, Home of San Diego Youth Symphony -->
-<li>
-  <strong>Opus Site Supervisor, KeyNote, Home of San Diego Youth Symphony</strong><br>
-  <em>2024–2025</em>
-  <ul class="exp-details">
-    <li>Led daily operations for music after-school programs at two schools, overseeing 60+ youth and optimizing resource allocation.</li>
-    <li>Facilitated weekly team meetings to assess progress, address program needs, and support staff development.</li>
-    <li>Oversaw attendance tracking and monitored student engagement to support program evaluation and reporting.</li>
-    <li>Maintained detailed records and generated reports to inform administrative decision-making and team coordination.</li>
-  </ul>
+<ul>
+  <li>
+    <strong>Freelance Data & Research Specialist, Various Clients</strong><br>
+    <em>2020–Present</em>
+    <ul class="exp-details">
+      <li>Conduct data collection, cleaning, and validation for client projects.</li>
+      <li>Design interactive dashboards to visualize key performance indicators.</li>
+    </ul>
     <div class="exp-photos">
-    <img src="images/keynote.png" alt="Community Project" />
-    <img src="images/keynote2.JPG" alt="Workshop Event" />
-    <img src="images/keynote3.JPG" alt="Workshop Event" />
-  </div>
-</li>
-
-<!-- Recreation Specialist, The City of National City -->
-<li>
-  <strong>Recreation Specialist, The City of National City</strong><br>
-  <em>2023–2025</em>
-  <ul class="exp-details">
-    <li>Planned and implemented recreational programs for youth and families, fostering community engagement.</li>
-    <li>Collaborated with local organizations to enhance program offerings and outreach.</li>
-    <li>Monitored program participation and gathered feedback for continuous improvement.</li>
-    <li>Maintained a safe and inclusive environment for all participants.</li>
-  </ul>
-     <div class="exp-photos">
-    <img src="images/nc1.JPG" alt="Community Project" />
-    <img src="images/Nc2.jpeg" alt="Workshop Event" />
-    <img src="images/nc3.JPG" alt="Workshop Event" />
-  </div>
-</li>
+      <img src="images/work1.jpg" alt="Dashboard" />
+      <img src="images/work2.jpg" alt="Team" />
+    </div>
+  </li>
+  <div class="exp-divider"></div>
+  <li>
+    <strong>Opus Site Supervisor, KeyNote, San Diego Youth Symphony</strong><br>
+    <em>2024–2025</em>
+    <ul class="exp-details">
+      <li>Led daily operations for music after-school programs at two schools.</li>
+      <li>Facilitated weekly team meetings to assess progress and support staff.</li>
+    </ul>
+    <div class="exp-photos">
+      <img src="images/keynote.png" alt="Community Project" />
+      <img src="images/keynote2.JPG" alt="Workshop Event" />
+    </div>
+  </li>
+  <div class="exp-divider"></div>
+  <li>
+    <strong>Recreation Specialist, The City of National City</strong><br>
+    <em>2023–2025</em>
+    <ul class="exp-details">
+      <li>Planned and implemented recreational programs for youth and families.</li>
+      <li>Collaborated with local organizations to enhance program offerings.</li>
+    </ul>
+    <div class="exp-photos">
+      <img src="images/nc1.JPG" alt="Community Project" />
+      <img src="images/Nc2.jpeg" alt="Workshop Event" />
+    </div>
+  </li>
+</ul>
         <!-- Add more roles as needed -->
       </ul>
     </section>
