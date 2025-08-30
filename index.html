@@ -1,34 +1,11 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-
 <head>
-  <!-- Add Google Fonts to <head> -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-	  /* ...existing CSS... */
-
-  .icons a:hover {
-    transform: scale(1.2);
-    box-shadow: 0 2px 12px rgba(0,123,182,0.15);
-  }
-
-  /* Add fade-in animation here */
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
-  }
-  @keyframes fadeIn {
-    to { opacity: 1; }
-  }
-    /* Paste the new CSS code here */
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      background: #f7f9fb;
+      background: #fff; /* pure white background */
       color: #222;
     }
     #wrapper {
@@ -36,316 +13,244 @@
       margin: 0 auto;
       padding: 2rem;
       background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(0,123,182,0.08);
+      border-radius: 0;
+      box-shadow: none;
     }
-    .post.featured, .posts article {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(8px);
-      border-radius: 14px;
-      box-shadow: 0 2px 12px rgba(0,123,182,0.10);
-      border: 1px solid rgba(200,200,200,0.2);
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
       margin-bottom: 2rem;
-      padding: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0,123,182,0.08);
+      border: 1px solid #eee;
+      padding: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       transition: box-shadow 0.2s, transform 0.2s;
     }
-    .post.featured:hover, .posts article:hover {
+    .project-card:hover {
       box-shadow: 0 6px 24px rgba(0,123,182,0.18);
-      transform: translateY(-4px) scale(1.02);
+      transform: translateY(-4px) scale(1.03);
     }
-    .button, button {
-      background: linear-gradient(90deg, #0077b6, #00b4d8);
-      color: #fff;
-      border: none;
-      border-radius: 24px;
-      padding: 0.7em 2em;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      transition: background 0.2s, transform 0.2s;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,123,182,0.10);
-    }
-    .button:hover, button:hover {
-      background: linear-gradient(90deg, #00b4d8, #0077b6);
-      transform: translateY(-2px) scale(1.04);
-    }
-    .image.main, .image.fit {
-      border-radius: 12px;
+    .project-card img {
+      width: 100%;
+      max-width: 160px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
       box-shadow: 0 2px 8px rgba(0,123,182,0.07);
       transition: transform 0.2s;
     }
-    .image.main:hover, .image.fit:hover {
-      transform: scale(1.03);
+    .project-card img:hover {
+      transform: scale(1.04);
     }
-    nav ul.links li.active a {
+    .project-title {
       color: #0077b6;
-      font-weight: bold;
-      border-bottom: 2px solid #00b4d8;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
-    footer {
-      background: #f1f3f6;
-      border-radius: 14px;
-      padding: 2rem;
-      margin-top: 2rem;
-      box-shadow: 0 2px 12px rgba(0,123,182,0.06);
+    .project-tags span {
+      background: #00b4d8;
+      color: #fff;
+      padding: 0.2em 0.7em;
+      border-radius: 12px;
+      font-size: 0.85em;
+      margin-right: 0.4em;
+      margin-bottom: 0.4em;
+      display: inline-block;
     }
-    input, textarea {
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      padding: 0.6em;
-      margin-bottom: 1em;
-      width: 100%;
-      font-family: inherit;
-      background: #f7f9fb;
+    .project-desc {
+      font-size: 0.98em;
+      margin-bottom: 1rem;
+      text-align: center;
     }
-    .icons a {
-      transition: transform 0.2s, box-shadow 0.2s;
+    .project-link {
+      background: linear-gradient(90deg, #0077b6, #00b4d8);
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      padding: 0.5em 1.2em;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,123,182,0.10);
+      display: inline-block;
     }
-    .icons a:hover {
-      transform: scale(1.2);
-      box-shadow: 0 2px 12px rgba(0,123,182,0.15);
+    .project-link:hover {
+      background: linear-gradient(90deg, #00b4d8, #0077b6);
+      transform: scale(1.05);
     }
-</style>
-	<title> Data Insights by Katherine Saavedra </title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    @media (max-width: 700px) {
+      #wrapper { padding: 1rem; }
+      .projects-grid { gap: 1rem; }
+      .project-card { padding: 1rem; }
+    }
+  </style>
+  <title>Data Insights by Katherine Saavedra</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
 </head>
 
 <body class="is-preload">
-	<!-- Loader -->
-<div id="loader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#f7f9fb;z-index:9999;">
-  <div style="width:48px;height:48px;border:6px solid #00b4d8;border-top:6px solid #fff;border-radius:50%;animation:spin 1s linear infinite;"></div>
-</div>
-<script>
-  window.addEventListener('load', function() {
-    document.getElementById('loader').style.display = 'none';
-  });
-</script>
-<style>
-@keyframes spin { 100% { transform: rotate(360deg); } }
-</style>
+  <div id="wrapper">
+    <!-- Intro -->
+    <div id="intro" style="margin-bottom:2rem;">
+      <h1>KATHERINE'S PORTFOLIO</h1>
+      <p>Welcome to my portfolio! This website showcases my work as a data analyst, including projects in Python, RStudio, SQL, Tableau, and Power BI.</p>
+      <p>Visit my profile on <a href="https://www.linkedin.com/in/katherinesaavedrac/">LinkedIn</a>.</p>
+      <ul class="actions">
+        <li><a href="#projects" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+      </ul>
+    </div>
 
-	<!-- Wrapper -->
-	<div id="wrapper" class="fade-in">
+    <!-- Nav -->
+    <nav id="nav" style="margin-bottom:2rem;">
+      <ul class="links">
+        <li class="active"><a href="index.html">Projects</a></li>
+        <li><a href="elements.html">Katherine's Resume</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="https://twitter.com/kathedsc" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+        <li><a href="https://github.com/Katherinedsc" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
 
-		<!-- Intro -->
-		<div id="intro">
-			<h1>This is <br />
-				KATHERINE'S PORTFOLIO </h1>
-			<p> Welcome to my portfolio! This website has been created using HTML and was designed to showcase some of
-				my work as a data analyst. Within this portfolio, you will find a variety of projects that highlight my
-				skills and experience in the field of data analysis. </p>
-			<p>Data Analyst well versed in SQL, Python, RStudio, Microsoft Excel, Tableau and Power BI. </p>
+    <!-- Projects Section -->
+    <h2 id="projects" style="text-align:center; margin-bottom:2rem; font-weight:700; color:#0077b6;">Featured Projects</h2>
+    <div class="projects-grid">
+      <!-- Python Project -->
+      <div class="project-card">
+        <img src="images/PYTHON.jpg" alt="Python Project" />
+        <div class="project-title">Data Exploration in Python</div>
+        <div class="project-tags">
+          <span>Python</span>
+          <span>Data Analysis</span>
+        </div>
+        <div class="project-desc">Python project using programming to solve problems, automate tasks, and perform data analysis or machine learning.</div>
+        <a href="https://katherinedsc.github.io/Python-Project-/titanic-analisis.html" class="project-link">View Project</a>
+      </div>
+      <!-- SQL Project -->
+      <div class="project-card">
+        <img src="images/sql.jpg" alt="SQL Project" />
+        <div class="project-title">Data Cleaning in SQL</div>
+        <div class="project-tags">
+          <span>SQL</span>
+          <span>Data Analysis</span>
+        </div>
+        <div class="project-desc">SQL project for extracting, transforming, and analyzing data to solve business problems and visualize insights.</div>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <!-- Tableau Project -->
+      <div class="project-card">
+        <img src="images/Tableau-Logo.png" alt="Tableau Project" />
+        <div class="project-title">Tableau Projects</div>
+        <div class="project-tags">
+          <span>Tableau</span>
+          <span>Data Analysis</span>
+        </div>
+        <div class="project-desc">Tableau project for creating visualizations and dashboards to gain insights and communicate findings.</div>
+        <a href="https://public.tableau.com/app/profile/katherine1469" class="project-link">View Projects</a>
+      </div>
+      <!-- Power BI Project -->
+      <div class="project-card">
+        <img src="images/powerbi.jpg.webp" alt="Power BI Project" />
+        <div class="project-title">Power BI Visualizations</div>
+        <div class="project-tags">
+          <span>Power BI</span>
+          <span>Data Analysis</span>
+        </div>
+        <div class="project-desc">Power BI project for creating interactive dashboards and reports to visualize and analyze data from multiple sources.</div>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <!-- RStudio Project -->
+      <div class="project-card">
+        <img src="images/r-studio.jpg.webp" alt="RStudio Project" />
+        <div class="project-title">RStudio</div>
+        <div class="project-tags">
+          <span>RStudio</span>
+          <span>Data Analysis</span>
+        </div>
+        <div class="project-desc">RStudio project using R for data analysis, statistical modeling, and visualization for data-driven decision making.</div>
+        <a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="project-link">View Project</a>
+      </div>
+    </div>
 
- </a><br />
-			Visit my profile in Linkedin <a
-				href="https://www.linkedin.com/in/katherinesaavedrac/">@katherinesaavedrac</a>.</p>
-			<ul class="actions">
-				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-			</ul>
-		</div>
+    <!-- Footer -->
+    <footer id="footer" style="margin-top:3rem;">
+      <section>
+        <form action="https://formspree.io/f/xlekwnle" method="POST">
+          <label>
+            Full Name
+            <input type="text" name="name" id="full-name">
+          </label>
+          <label>
+            Your email:
+            <input type="email" name="email">
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+      <section class="split contact">
+        <section class="alt">
+          <h3>Address</h3>
+          <p>San Diego, California.<br /></p>
+        </section>
+        <section>
+          <h3>Phone number</h3>
+          <p><a href="#"> +1(858)281-1759</a></p>
+        </section>
+        <section>
+          <h3>Email</h3>
+          <p><a href="#">data.ksaa@gmail.com</a></p>
+        </section>
+        <section>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li><a href="https://twitter.com/kathedsc" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+            <li><a href="https://github.com/Katherinedsc" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+          </ul>
+        </section>
+      </section>
+      <hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
+      <div id="copyright" style="text-align:center; color:#888; font-size:0.95em;">
+        &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
+      </div>
+    </footer>
+  </div>
 
-		<!-- Header -->
-		<header id="header">
-			<a href="index.html" class="logo">Katherine Saavedra</a>
-		</header>
-
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li class="active"><a href="index.html">Projects</a></li>
-				<li><a href="elements.html">Katherine's Resume</a></li>
-			</ul>
-			<ul class="icons">
-				<li><a href="https://twitter.com/kathedsc" target="_blank"class="icon brands fa-twitter"><span
-							class="label">Twitter</span></a></li>
-				<li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank"class="icon brands fa-linkedin-in"><span
-							class="label">Linkedin</span></a></li>
-				<li><a href="https://github.com/Katherinedsc" target="_blank"class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-			</ul>
-		</nav>
-
-		<!-- Main -->
-		<div id="main">
-			<!-- Add this before your first <article class="post featured"> -->
-<h2 style="text-align:center; margin-top:3rem; margin-bottom:2rem; font-weight:700; color:#0077b6;">
-  Featured Projects
-</h2>
-
-			<!-- Featured Post -->
-			<article class="post featured">
-				<header class="major">
-					<span class="date"> Updated on August 29, 2025 </span>
-					<h2><a href="#">DATA EXPLORATION IN <br />
-							PYTHON </a></h2>
-					<p>Python project involves using Python programming language to solve a problem or automate a task,
-						and may include data analysis, machine learning or web development. </p>
-				</header>
-				<a href="https://katherinedsc.github.io/Python-Project-/titanic-analisis.html" class="image main"><img src="images/PYTHON.jpg" alt="" /></a>
-				<ul class="actions special">
-					<li><a href="https://katherinedsc.github.io/Python-Project-/titanic-analisis.html"
-							class="button large">VIEW PROJECT</a></li>
-				</ul>
-			</article>
-			<!-- Posts -->
-			<section class="posts">
-				<article>
-					<header>
-						<span class="date">April 12, 2024</span>
-						<h2><a href="#">DATA CLEANING IN <br />
-								SQL</a></h2>
-								<!-- Example for Python project -->
-<div style="margin-top:0.5rem;">
-  <span style="background:#00b4d8;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;margin-right:0.5em;">SQL</span>
-  <span style="background:#0077b6;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;">Data Analysis</span>
-</div>
-					</header>
-					<a href="#" class="image fit"><img src="images/sql.jpg" alt="" /></a>
-					<p>SQL project involves using SQL to extract, transform & analyze data to solve a business problem,
-						and communicate insights with visualizations.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">VIEW PROJECT</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<span class="date">April 12, 2024</span>
-						<h2><a href="#">TABLEAU PROJECTS<br />
-							</a></h2>
-							<!-- Example for Python project -->
-<div style="margin-top:0.5rem;">
-  <span style="background:#00b4d8;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;margin-right:0.5em;">TABLEAU</span>
-  <span style="background:#0077b6;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;">Data Analysis</span>
-</div>
-					</header>
-					<a href="https://public.tableau.com/app/profile/katherine1469" class="image fit"><img src="images/Tableau-Logo.png" alt="" /></a>
-					<p>Tableau project involves using Tableau software to create visualizations and dashboards from data
-						to gain insights and communicate findings.</p>
-					<ul class="actions special">
-						<li><a href="https://public.tableau.com/app/profile/katherine1469" class="button">VIEW PROJECTS</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<span class="date">April 12, 2024</span>
-						<h2><a href="#">POWER BI VISUALIZATIONS<br />
-								</a></h2>
-								<!-- Example for Python project -->
-<div style="margin-top:0.5rem;">
-  <span style="background:#00b4d8;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;margin-right:0.5em;">Power BI</span>
-  <span style="background:#0077b6;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;">Data Analysis</span>
-</div>
-					</header>
-					<a href="#" class="image fit"><img src="images/powerbi.jpg.webp" alt="" /></a>
-					<p>Power BI project involves using Power BI software to create interactive dashboards and reports to
-						visualize and analyze data from multiple sources, to support data-driven decision making.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button">VIEW PROJECT</a></li>
-					</ul>
-				</article>
-				<article>
-					<header>
-						<span class="date">April 12, 2024</span>
-						<h2><a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html">RSTUDIO<br />
-							</a></h2>
-							<!-- Example for Python project -->
-<div style="margin-top:0.5rem;">
-  <span style="background:#00b4d8;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;margin-right:0.5em;">RStudio</span>
-  <span style="background:#0077b6;color:#fff;padding:0.3em 0.8em;border-radius:12px;font-size:0.85em;">Data Analysis</span>
-</div>
-					</header>
-					<a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="image fit"><img src="images/r-studio.jpg.webp" alt="" /></a>
-					<p>RStudio project involves using R programming language and RStudio IDE to analyze data, build
-						statistical models, and create visualizations for data-driven decision making.</p>
-					<ul class="actions special">
-						<li><a href="https://katherinedsc.github.io/R-project-/amazon-books-reviews.html" class="button">VIEW PROJECT</a></li>
-					</ul>
-		</div>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<section>
-				<!-- modify this form HTML and place wherever you want your form -->
-				<form action="https://formspree.io/f/xlekwnle" method="POST">
-					<label>
-						Full Name
-						<input type="text" name="name" id="full-name">
-					</label>
-					<label>
-						Your email:
-						<input type="email" name="email">
-					</label>
-					<label>
-						Your message:
-						<textarea name="message"></textarea>
-					</label>
-					<!-- your other form fields go here -->
-					<button type="submit">Send</button>
-				</form>
-			</section>
-			<section class="split contact">
-				<section class="alt">
-					<h3>Address</h3>
-					<p>San Diego, California.<br />
-					</p>
-				</section>
-				<section>
-					<h3>Phone number</h3>
-					<p><a href="#"> +1(858)281-1759</a></p>
-				</section>
-				<section>
-					<h3>Email</h3>
-					<p><a href="#">data.ksaa@gmail.com</a></p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						<li><a href="https://twitter.com/kathedsc" target="_blank"class="icon brands alt fa-twitter"><span
-									class="label">Twitter</span></a></li>
-						<li><a href="https://www.linkedin.com/in/katherinesaavedrac/" target="_blank"class="icon brands alt fa-linkedin-in"><span class="label">Linkedin</span></a>
-						</li>
-						</li>
-						<li><a href="https://github.com/Katherinedsc" target="_blank"class="icon brands alt fa-github"><span
-									class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-
-
-
-
-
-		<!-- Copyright -->
-		<div id="copyright">
-			<hr style="margin:2rem 0; border:none; border-top:1px solid #eee;">
-<div id="copyright" style="text-align:center; color:#888; font-size:0.95em;">
-  &copy; 2025 Katherine Saavedra. Design by <a href="https://html5up.net" style="color:#0077b6;">HTML5 UP</a>
-</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-<!-- Add before </body> -->
-<a href="#top" id="backToTop" style="position:fixed;bottom:32px;right:32px;background:#0077b6;color:#fff;padding:12px 18px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:24px;text-align:center;display:none;z-index:1000;transition:background 0.2s;">
-  ↑
-</a>
-<script>
-  window.addEventListener('scroll', function() {
-    document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
-  });
-</script>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <a href="#top" id="backToTop" style="position:fixed;bottom:32px;right:32px;background:#0077b6;color:#fff;padding:12px 18px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12);font-size:24px;text-align:center;display:none;z-index:1000;transition:background 0.2s;">
+    ↑
+  </a>
+  <script>
+    window.addEventListener('scroll', function() {
+      document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+  </script>
 </body>
-
 </html>
