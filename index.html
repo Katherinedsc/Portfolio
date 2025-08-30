@@ -840,12 +840,11 @@ document.getElementById('imgModalClose').onclick = function() {
   document.getElementById('imgModalImg').src = '';
 };
 
-// Close modal when clicking the background (not the image)
+// Close modal when clicking anywhere in the modal (background or image)
 document.getElementById('imgModal').addEventListener('click', function(e) {
-  if (e.target === this) {
-    this.style.display = 'none';
-    document.getElementById('imgModalImg').src = '';
-  }
+  // Always close, no matter where you click inside the modal
+  this.style.display = 'none';
+  document.getElementById('imgModalImg').src = '';
 });
 </script>
 <!-- Image Modal -->
